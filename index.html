@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sfera | The hiring team you don't have to build</title>
+<meta name="description" content="The hiring team you do not have to build. Specialists who source, screen and structure your hiring, with one point of contact and a 30-day replacement guarantee.">
+<meta property="og:title" content="sfera | The hiring team you don't have to build">
+<meta property="og:description" content="The hiring team you don't have to build. Specialists who source, screen and structure your hiring.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sferapeople.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@500&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<style>
+body{margin:0;background:#f3f1fb}
+a{color:#4a3cc9}a:hover{color:#1e1690}
+.orb{display:inline-block;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 30% 24%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 34%), radial-gradient(circle at 72% 80%, rgba(179,22,63,.6) 0%, rgba(179,22,63,0) 62%), radial-gradient(circle at 50% 50%, rgba(143,134,232,.9) 0%, rgba(74,60,201,.8) 100%);box-shadow:inset 0 0 10px rgba(255,255,255,.65), 0 6px 20px rgba(143,134,232,.5);animation:morph 9s ease-in-out infinite alternate}
+@keyframes morph{0%{border-radius:50% 50% 50% 50% / 55% 55% 45% 45%}50%{border-radius:58% 42% 52% 48% / 46% 58% 42% 54%}100%{border-radius:44% 56% 46% 54% / 56% 44% 56% 44%}}
+.wm{background:linear-gradient(100deg,#2a20b8 0%,#6a5df0 38%,#a07bd8 62%,#b3163f 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:400;animation:shim 9s ease-in-out infinite alternate}
+@keyframes shim{to{background-position:100% 0}}
+.streak{position:absolute;height:30px;border-radius:9999px;filter:blur(16px);background:linear-gradient(90deg, rgba(143,134,232,0), rgba(185,179,238,.95) 35%, rgba(179,22,63,.7) 70%, rgba(179,22,63,0));animation:sx 16s ease-in-out infinite alternate}
+@keyframes sx{from{transform:translateX(-90px)}to{transform:translateX(90px)}}
+.liq{filter:none}
+.marq{display:flex;gap:12px;width:max-content;animation:marqx 46s linear infinite}
+@keyframes marqx{to{transform:translateX(-50%)}}
+details.faq summary{cursor:pointer;list-style:none}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq[open] .plus{transform:rotate(45deg)}
+.plus{display:inline-block;transition:transform .2s}
+.wm{animation:none}
+.orbit{animation:spin 48s linear infinite}
+.gb-soft{background:radial-gradient(circle at 70% 78%, rgba(106,93,240,.35) 0%, rgba(106,93,240,0) 55%), radial-gradient(circle at 35% 70%, rgba(143,134,232,.45) 0%, rgba(143,134,232,0) 60%), rgba(185,179,238,.10);box-shadow:inset 0 0 0 1px rgba(185,179,238,.3), inset 3px 4px 10px rgba(201,195,255,.3), inset -4px -6px 12px rgba(30,22,144,.3), 0 6px 16px rgba(90,75,218,.25)}
+.gb-soft .gb-spec{opacity:.55}
+.sat{position:absolute;left:50%;top:50%;width:0;height:0;display:flex;align-items:center;justify-content:center}
+.sat .gb{flex:none}
+@keyframes hin{from{opacity:0;scale:.82}to{opacity:1;scale:1}}.hsph{position:absolute;inset:10%;overflow:hidden;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,0) 56%, rgba(201,195,255,.07) 76%, rgba(185,179,238,.20) 100%);box-shadow:inset 0 0 0 1px rgba(214,208,255,.40), inset 0 0 18px rgba(201,195,255,.22), 0 24px 60px rgba(90,75,218,.07);backdrop-filter:blur(1px) saturate(125%);-webkit-backdrop-filter:blur(1px) saturate(125%);animation:hmorph 10s ease-in-out infinite alternate, hfloat 8s ease-in-out infinite alternate, hin 1.3s ease-out 2.2s backwards}
+.hs-iri{position:absolute;inset:-4%;background:conic-gradient(from 0deg,#f2a7c3,#c9c3ff,#8f86e8,#e0dcff,#f7c6dc,#b9b3ee,#f2a7c3);filter:blur(6px);opacity:.85;-webkit-mask-image:radial-gradient(circle at 50% 50%, transparent 60%, #000 76%, #000 94%, transparent 100%);mask-image:radial-gradient(circle at 50% 50%, transparent 60%, #000 76%, #000 94%, transparent 100%);animation:spin 20s linear infinite}
+.hs-spec{position:absolute;left:17%;top:11%;width:26%;height:9%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(255,255,255,.95), rgba(255,255,255,0) 72%);transform:rotate(-30deg);filter:blur(1.5px)}
+.hs-spec2{position:absolute;right:15%;bottom:17%;width:9%;height:5%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(255,255,255,.75), rgba(255,255,255,0) 72%);transform:rotate(-30deg);filter:blur(1.5px)}
+.hs-floor{position:absolute;left:18%;right:18%;bottom:0;height:10%;border-radius:50%;background:radial-gradient(ellipse, rgba(143,134,232,.5), rgba(143,134,232,0) 70%);filter:blur(18px);animation:hshadow 8s ease-in-out infinite alternate}
+@keyframes hmorph{0%{border-radius:50% 50% 50% 50% / 55% 55% 45% 45%}50%{border-radius:54% 46% 52% 48% / 48% 54% 46% 52%}100%{border-radius:47% 53% 49% 51% / 53% 47% 53% 47%}}
+@keyframes hfloat{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-20px) rotate(4deg)}}
+@keyframes hshadow{from{transform:scale(1);opacity:.9}to{transform:scale(.88);opacity:.6}}
+.gb{position:relative;display:inline-block;width:20px;height:20px;overflow:hidden;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 70% 78%, rgba(179,22,63,.35) 0%, rgba(179,22,63,0) 55%), radial-gradient(circle at 35% 70%, rgba(143,134,232,.4) 0%, rgba(143,134,232,0) 60%), rgba(255,255,255,.25);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75), inset 3px 4px 8px rgba(255,255,255,.7), inset -4px -6px 10px rgba(30,22,144,.25), 0 6px 14px rgba(90,75,218,.18);animation:blobmorph 6s ease-in-out infinite alternate, bob 5s ease-in-out infinite alternate}
+.gb-iri{position:absolute;inset:-30%;background:conic-gradient(from 0deg,#b9b3ee,#f2a7c3,#b3163f,#8f86e8,#5a4bda,#b9b3ee);filter:blur(6px);opacity:.35;animation:spin 7s linear infinite}
+.gb-spec{position:absolute;left:18%;top:12%;width:38%;height:18%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(255,255,255,.95), rgba(255,255,255,0) 70%);transform:rotate(-28deg)}
+@keyframes bob{from{transform:translateY(0) rotate(-4deg)}to{transform:translateY(-3px) rotate(6deg)}}
+.pill{position:relative;overflow:hidden;animation:pillfloat 6s ease-in-out infinite alternate}
+.pill::after{display:none;content:"";position:absolute;top:0;bottom:0;left:-40%;width:40%;background:linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.75), rgba(242,167,195,.35), rgba(255,255,255,0));transform:skewX(-20deg);animation:sheen 4.5s ease-in-out infinite}
+@keyframes sheen{0%{left:-40%}60%,100%{left:120%}}
+@keyframes pillfloat{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+.spark{display:inline-block;animation:sparkspin 6s ease-in-out infinite}
+@keyframes sparkspin{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.25)}100%{transform:rotate(360deg) scale(1)}}
+.stage{position:absolute;right:7%;top:130px;width:clamp(240px,30vw,420px);aspect-ratio:1/1}
+.drops{position:absolute;inset:0;filter:url(#goo);animation:dropscycle 12s ease-in-out infinite}
+@keyframes dropscycle{0%,20%{opacity:1}27%,91%{opacity:0}96%,100%{opacity:1}}
+.drop{position:absolute;left:50%;top:50%;width:30%;aspect-ratio:1/1;margin:-15% 0 0 -15%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffffff 0%,#b9b3ee 30%,#8f86e8 65%,#b3163f 100%)}
+.dr1{animation:m1 12s cubic-bezier(.6,0,.3,1) infinite}
+.dr2{animation:m2 12s cubic-bezier(.6,0,.3,1) infinite}
+.dr3{animation:m3 12s cubic-bezier(.6,0,.3,1) infinite}
+.dr4{animation:m4 12s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes m1{0%{transform:translate(-280%,-120%) scale(.6)}22%,90%{transform:translate(0,0) scale(1.7)}91%,100%{transform:translate(-280%,-120%) scale(.6)}}
+@keyframes m2{0%,3%{transform:translate(260%,-160%) scale(.45)}23%,90%{transform:translate(0,0) scale(1.5)}91%,100%{transform:translate(260%,-160%) scale(.45)}}
+@keyframes m3{0%,5%{transform:translate(250%,150%) scale(.7)}24%,90%{transform:translate(0,0) scale(1.6)}91%,100%{transform:translate(250%,150%) scale(.7)}}
+@keyframes m4{0%,2%{transform:translate(-260%,160%) scale(.5)}22%,90%{transform:translate(0,0) scale(1.4)}91%,100%{transform:translate(-260%,160%) scale(.5)}}
+@keyframes bcycle{0%,18%{opacity:0;transform:scale(.7)}28%,86%{opacity:1;transform:scale(1)}94%,100%{opacity:0;transform:scale(.85)}}
+@keyframes fcycle{0%,20%{opacity:0}30%,86%{opacity:1}94%,100%{opacity:0}}
+@keyframes fadeout{to{opacity:0}}
+.floaty{position:absolute;inset:6%;animation:floaty 14s ease-in-out infinite}
+@keyframes floaty{0%{transform:translate(0,0) rotate(0deg) scale(1)}25%{transform:translate(-30px,-34px) rotate(9deg) scale(1.05)}50%{transform:translate(12px,-54px) rotate(-5deg) scale(.96)}75%{transform:translate(32px,-20px) rotate(11deg) scale(1.06)}100%{transform:translate(0,0) rotate(0deg) scale(1)}}
+.iri2{position:absolute;inset:-10%;background:radial-gradient(circle at 30% 72%, rgba(106,93,240,.35) 0%, rgba(106,93,240,0) 40%), radial-gradient(circle at 75% 30%, rgba(201,195,255,.4) 0%, rgba(201,195,255,0) 40%);filter:blur(22px);animation:spin 11s linear infinite reverse}
+.bubble{position:absolute;inset:0;overflow:hidden;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,.04) 0%, rgba(201,195,255,.08) 55%, rgba(143,134,232,.30) 82%, rgba(90,75,218,.50) 100%), radial-gradient(ellipse 55% 30% at 45% 20%, rgba(255,255,255,.25) 0%, rgba(255,255,255,0) 100%);box-shadow:0 30px 80px rgba(90,75,218,.22);backdrop-filter:blur(2px) saturate(170%) brightness(1.05);-webkit-backdrop-filter:blur(2px) saturate(170%) brightness(1.05);opacity:0;transform:scale(.7);animation:bcycle 12s ease-in-out infinite, blobmorph 6s ease-in-out infinite alternate}
+@keyframes appear{to{opacity:1;transform:scale(1)}}
+.bubble-img{position:absolute;inset:0;filter:drop-shadow(0 40px 60px rgba(90,75,218,.25));animation:bcycle 12s ease-in-out infinite}
+@keyframes pop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.bclip{position:absolute;inset:0;animation:breathe 6s ease-in-out infinite alternate}
+@keyframes breathe{from{transform:scale(1) rotate(0deg)}to{transform:scale(1.03) rotate(3deg)}}
+@keyframes wobble{0%{transform:scale(1,1) rotate(0deg)}25%{transform:scale(1.07,.94) rotate(6deg)}50%{transform:scale(.95,1.06) rotate(-4deg)}75%{transform:scale(1.05,.96) rotate(8deg)}100%{transform:scale(.97,1.04) rotate(-2deg)}}
+.bglint{position:absolute;inset:0;background:conic-gradient(from 30deg, rgba(201,195,255,.9), rgba(143,134,232,.9), rgba(138,63,209,.7), rgba(106,93,240,.9), rgba(224,220,255,.9), rgba(201,195,255,.9));mix-blend-mode:soft-light;opacity:.6;-webkit-mask-image:url("/_blob/2905fc3189dc09dd0ab6a5e170f154d6");mask-image:url("/_blob/2905fc3189dc09dd0ab6a5e170f154d6");-webkit-mask-size:100% 100%;mask-size:100% 100%;animation:hue 6s linear infinite}
+@keyframes hue{to{filter:hue-rotate(360deg)}}
+@keyframes blobmorph{0%{border-radius:50% 50% 50% 50% / 55% 55% 45% 45%}33%{border-radius:62% 38% 58% 42% / 40% 62% 38% 60%}66%{border-radius:38% 62% 40% 60% / 62% 38% 60% 40%}100%{border-radius:56% 44% 66% 34% / 48% 36% 64% 52%}}
+.iri{position:absolute;inset:-25%;background:conic-gradient(from 0deg,#c9c3ff,#8f86e8,#e0dcff,#6a5df0,#b9b3ee,#c9c3ff);filter:blur(30px);opacity:.22;animation:spin 8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.rim{position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1.5px rgba(143,134,232,.85), inset 0 0 34px rgba(143,134,232,.5), inset -18px -26px 54px rgba(90,75,218,.38), inset 0 -10px 22px rgba(185,179,238,.55), inset 14px 16px 30px rgba(201,195,255,.45)}
+.spec3{position:absolute;right:3%;top:18%;width:13%;height:52%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(201,195,255,.85), rgba(201,195,255,0) 70%);filter:blur(4px);transform:rotate(12deg)}
+.spec{position:absolute;left:17%;top:11%;width:36%;height:15%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(255,255,255,.95), rgba(255,255,255,0) 70%);transform:rotate(-28deg);filter:blur(2px)}
+.spec2{position:absolute;right:14%;bottom:20%;width:12%;height:20%;border-radius:50%;background:radial-gradient(ellipse at center, rgba(255,255,255,.8), rgba(255,255,255,0) 70%);transform:rotate(-28deg);filter:blur(3px)}
+.floor{position:absolute;left:8%;right:8%;bottom:-12%;height:12%;border-radius:50%;background:radial-gradient(ellipse, rgba(179,22,63,.45), rgba(143,134,232,.25) 50%, rgba(143,134,232,0) 75%);filter:blur(16px);opacity:0;animation:fcycle 12s ease-in-out infinite}
+@keyframes fadein{to{opacity:1}}
+@media (max-width: 900px){.stage{right:-18%;top:90px;opacity:.6}}
+.blob{position:absolute;border-radius:9999px;will-change:transform}
+.d1{animation:d1 26s ease-in-out infinite alternate}
+.d2{animation:d2 22s ease-in-out infinite alternate}
+.d3{animation:d3 30s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(-60px,40px) scale(1.06)}}
+@keyframes d2{to{transform:translate(50px,-30px) scale(.94)}}
+@keyframes d3{to{transform:translate(-40px,-50px) scale(1.1)}}
+.grain{position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.flutes{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(90deg, rgba(255,255,255,.38) 0 22px, rgba(255,255,255,0) 22px 44px);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);-webkit-mask-image:linear-gradient(90deg, transparent, black 25%, black 75%, transparent);mask-image:linear-gradient(90deg, transparent, black 25%, black 75%, transparent)}
+input,select,textarea{font:inherit;box-sizing:border-box}
+input:not([type=checkbox]),select,textarea{width:100%}
+input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #4a3cc9;outline-offset:2px}
+@media (max-width: 700px){
+  nav[aria-label="Main"] > div{display:none !important}
+  section:first-of-type .blob{opacity:.28 !important}
+  section:first-of-type .streak{opacity:.25 !important}
+  .stage{opacity:.35}
+}
+@media (prefers-reduced-motion: reduce){.marq{animation:none}.plus{transition:none}.d1,.d2,.d3,.orb,.wm,.streak,.iri,.iri2,.floaty,.gb,.gb-iri{animation:none}.drops{display:none}.bubble,.bubble-img{animation:none;opacity:1;transform:none}.bglint,.bclip,.hsph,.hs-iri,.hs-floor,.orbit{animation:none}.floor{animation:none;opacity:1}.liq{filter:none}.pill,.spark{animation:none}.pill::after{animation:none;display:none}}
+</style>
+</head>
+<body>
+<div style="font-family: Geist, 'Helvetica Neue', Arial, sans-serif; color: #14112b; background: #f3f1fb;">
+
+  <section style="position: relative; overflow: hidden; padding: 24px 24px 112px;">
+    <svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false">
+      <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="12" result="b"></feGaussianBlur><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"></feColorMatrix></filter>
+      <filter id="liq" x="-10%" y="-30%" width="120%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="3"><animate attributeName="baseFrequency" dur="10s" values="0.012 0.03;0.02 0.014;0.012 0.03" repeatCount="indefinite"></animate></feTurbulence><feDisplacementMap in="SourceGraphic" scale="4"></feDisplacementMap></filter>
+    </svg>
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+      <div class="blob d1" style="width: 620px; height: 620px; right: -120px; top: -80px; background: #1e1690; filter: blur(90px); opacity: .8;"></div>
+      <div class="blob d2" style="width: 420px; height: 420px; right: 300px; top: 120px; background: #8f86e8; filter: blur(70px); opacity: .85;"></div>
+      <div class="blob d3" style="width: 360px; height: 360px; right: 40px; bottom: -160px; background: #b9b3ee; filter: blur(70px);"></div>
+      <div class="blob d2" style="width: 170px; height: 170px; right: 500px; top: 50px; background: #b3163f; filter: blur(60px); opacity: .7;"></div>
+      <div class="streak" style="width: 520px; right: 120px; top: 190px; opacity: .85;"></div>
+      <div class="streak" style="width: 380px; right: 260px; top: 250px; opacity: .7; animation-duration: 20s;"></div>
+      <div class="streak" style="width: 460px; right: 60px; top: 320px; opacity: .8; animation-duration: 13s; animation-direction: alternate-reverse;"></div>
+      <div class="streak" style="width: 300px; right: 340px; top: 400px; opacity: .6; animation-duration: 18s;"></div>
+      <div class="streak" style="width: 420px; right: 140px; top: 470px; opacity: .75; animation-duration: 15s; animation-direction: alternate-reverse;"></div>
+      <div class="stage">
+        <div class="hs-floor"></div>
+        <div class="hsph">
+          <span class="hs-iri"></span>
+          <span class="hs-spec"></span>
+          <span class="hs-spec2"></span>
+        </div>
+      </div>
+      <div class="grain"></div>
+    </div>
+
+    <nav aria-label="Main" style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; font-size: 36px; letter-spacing: -0.05em; text-decoration: none;"><span class="gb" aria-hidden="true" style="width: 22px; height: 22px;"><span class="gb-iri"></span><span class="gb-spec"></span></span><span class="wm liq">sfera</span></a>
+      <div style="display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 40px rgba(20,17,43,.10); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+        <a href="#services" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Services</a>
+        <a href="#how" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">How we work</a>
+        <a href="#about" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">About</a>
+      </div>
+      <a href="https://calendar.app.google/7fG5bMan7isemjaMA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 8px 8px 20px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book a call <span aria-hidden="true" style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9999px; background: #ffffff; color: #5a4bda;">&#8599;</span></a>
+    </nav>
+
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding-top: 144px;">
+      <div style="max-width: 720px; display: flex; flex-direction: column; gap: 24px;">
+        <span class="pill" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; color: #4a3cc9;"><span class="spark" aria-hidden="true" style="color: #4a3cc9; font-size: 22px; line-height: 1;">&#10022;</span>Your hiring team, on demand</span>
+        <h1 style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: .98; font-weight: 500; letter-spacing: -0.05em; text-wrap: balance;">The hiring team you don't have to <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; color: #4a3cc9;">build</em>.</h1>
+        <p style="margin: 0; max-width: 540px; font-size: 19px; line-height: 30px; color: #565075;">Specialists who source, screen and structure your hiring, so you can stay focused on the business. One point of contact, clear steps, no surprises.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <a href="https://calendar.app.google/7fG5bMan7isemjaMA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 24px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 16px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book an intro call <span aria-hidden="true" style="display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9999px; background: #ffffff; color: #5a4bda;">&#8599;</span></a>
+          <a href="#how" style="padding: 14px 24px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); color: #14112b; font-size: 16px; font-weight: 500; text-decoration: none;">See how we work</a>
+        </div>
+        <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;"><span>2-day shortlist</span><span>30-day guarantee</span><span>Specialist team</span><span>US</span><span>UK</span><span>EU</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Results" style="padding: 56px 24px 24px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">28<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> days</em></span><span style="font-size: 15px; color: #565075;">Average time to fill</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">40+<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> hires</em></span><span style="font-size: 15px; color: #565075;">In 12 months</span></div>
+        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">92%<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> yes</em></span><span style="font-size: 15px; color: #565075;">Offer acceptance rate</span></div>
+      </div>
+      <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Results from our founder leading talent acquisition at a venture-backed SaaS startup</p>
+    </div>
+  </section>
+
+  <section aria-label="Roles we hire" style="padding: 24px 0 56px; background: #f3f1fb;">
+    <div style="overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);">
+      <div class="marq">
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Backend Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Product Designer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">SDR</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Operations Lead</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Head of Engineering</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Sales Lead</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Data Analyst</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Engineering Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Account Executive</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Product Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">DevOps Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Customer Success Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">QA Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Marketing Lead</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Backend Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Product Designer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">SDR</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Operations Lead</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Head of Engineering</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Sales Lead</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Data Analyst</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Engineering Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Account Executive</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Product Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">DevOps Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Customer Success Manager</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">QA Engineer</span>
+        <span style="white-space: nowrap; padding: 12px 22px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 15px; color: #14112b;">Marketing Lead</span>
+      </div>
+    </div>
+  </section>
+
+  <style>
+.sn-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 16px;max-width:900px;margin:0 auto}
+.sn{display:inline-block;padding:13px 22px;border-radius:18px;font-size:clamp(17px,1.7vw,21px);line-height:1.2;letter-spacing:-0.02em;color:#14112b;border:1px solid #d8d3f0;transform:rotate(var(--r));transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.sn:hover{transform:rotate(0) translateY(-3px) scale(1.04)}
+.sn em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;font-size:1.12em}
+.sn.lil{background:rgba(185,179,238,.28)}.sn.pnk{background:rgba(247,198,220,.42);border-color:#f0cfe0}.sn.wht{background:rgba(255,255,255,.55)}
+@media (prefers-reduced-motion:reduce){.sn{transition:none}}
+</style>
+<section aria-label="Sound familiar" style="padding: 56px 24px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:14px;"><span class="gb" aria-hidden="true" style="width:30px;height:30px;"><span class="gb-iri"></span></span><h2 style="margin:0;font-size:clamp(32px,4.2vw,52px);line-height:1.04;font-weight:500;letter-spacing:-0.045em;color:#14112b;">Sound <em style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;">familiar</em>?</h2></div>
+      <div class="sn-wrap">
+        <span class="sn lil" style="--r:-2.5deg">Interviews, <em>no fit.</em></span>
+        <span class="sn pnk" style="--r:1.8deg">Candidates go <em>quiet.</em></span>
+        <span class="sn wht" style="--r:-1.2deg">One person does <em>it all.</em></span>
+        <span class="sn lil" style="--r:2.4deg">Hiring eats <em>your week.</em></span>
+        <span class="sn wht" style="--r:-2deg">Every hire takes <em>longer.</em></span>
+        <span class="sn pnk" style="--r:1.4deg">No idea what's <em>working.</em></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding: 112px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end;">
+        <div style="max-width: 640px;">
+          <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Services</p>
+          <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">We give every stage of hiring <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">structure</em>.</h2>
+        </div>      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 0;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Hire</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Get the people</span><span style="font-size: 16px; line-height: 24px; color: #565075;">We find, screen and bring you the right candidates.</span></div>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Full Cycle</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">We find, interview and close the right person. You meet only finalists.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>One key role, no time to recruit.</p></div>
+        </article>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Sourcing Sprint</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">Pre-screened candidates, ready for your team to interview.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Good process, too few candidates.</p></div>
+        </article>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Embedded Recruiter</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">A dedicated recruiter inside your team and tools.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Several roles at once.</p></div>
+        </article>
+        <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 24px;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Build</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Build the process</span><span style="font-size: 16px; line-height: 24px; color: #565075;">Set up how you hire, measure it and automate the routine.</span></div>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Process Setup</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">A clear, repeatable way to hire that your team can run.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Hiring feels slow or depends on one person.</p></div>
+        </article>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">People Analytics</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">Live dashboards that show what works and what to fix.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Decisions run on gut feeling.</p></div>
+        </article>
+        <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
+          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">HR Automation</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">AI workflows for the repetitive work: screening, scheduling, updates.</p>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Manual work eats your week.</p></div>
+        </article>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-end; justify-content: flex-start; padding-top: 32px; border-top: 1px solid #d8d3f0;">
+        <p style="margin: 0; max-width: 340px; font-size: 16px; line-height: 24px; color: #565075;">Not sure which one fits? <a href="#contact">Tell us what you need</a> and we will say so honestly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="position: relative; overflow: hidden; padding: 112px 24px; background: #0d0b24; color: #f3f1ff;">
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+      <div class="blob d3" style="width: 520px; height: 520px; left: -160px; top: -120px; background: #2a20b8; filter: blur(90px); opacity: .9;"></div>
+      <div class="blob d1" style="width: 300px; height: 300px; right: -60px; bottom: -80px; background: #6e60f0; filter: blur(80px); opacity: .7;"></div>
+      <div class="grain"></div>
+    </div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
+      <div style="max-width: 640px;">
+        <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b3addb;">How we work</p>
+        <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">Easy to start. Easy to <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #b9b3ff;">work with</em></h2>
+      </div>
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">01</span>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Talk</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">A short call. You tell us what is slowing your team down.</p>
+        </li>
+        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">02</span>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Plan</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We agree on scope, owners and timing, in plain language. No surprises.</p>
+        </li>
+        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">03</span>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Do</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We run the work and keep you posted. You see progress without chasing it.</p>
+        </li>
+        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
+          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">04</span>
+          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Improve</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We review results with you, adjust, and keep what works.</p>
+        </li>
+      </ol>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="padding: 28px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; gap: 10px;">
+          <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b9b3ff;">What you do</p>
+          <p style="margin: 0; font-size: 17px; line-height: 27px; color: #f3f1ff;">Tell us what matters, give quick feedback and make the calls.</p>
+        </div>
+        <div style="padding: 28px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; gap: 10px;">
+          <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b9b3ff;">What we do</p>
+          <p style="margin: 0; font-size: 17px; line-height: 27px; color: #f3f1ff;">Handle the work, own the details and keep it all in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding: 112px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
+      <div style="max-width: 760px;">
+        <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Who's behind sfera</p>
+        <h2 style="margin: 0; font-size: clamp(38px, 4.6vw, 56px); line-height: 1.02; font-weight: 500; letter-spacing: -0.04em; text-wrap: balance;">One point of contact. The right <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">team</em> behind it.</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch;">
+        <article style="flex: 1 1 380px; min-width: 0; padding: 24px; border-radius: 32px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 20px;">
+          <div aria-label="Founder" role="img" style="aspect-ratio: 16 / 11; border-radius: 22px; position: relative; overflow: hidden; background: #e9e6f8; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box;">
+            <div class="blob" style="width: 300px; height: 300px; left: 20px; top: -40px; background: #8f86e8; filter: blur(70px);"></div>
+            <div class="blob" style="width: 160px; height: 160px; right: 30px; bottom: -20px; background: #b9b3ee; filter: blur(50px);"></div>
+            <span aria-hidden="true" style="position: absolute; inset: 0; display: grid; place-items: center; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 120px; line-height: 1; color: #4a3cc9; opacity: .9;">S</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; padding: 4px 8px 8px;">
+            <p style="margin: 0; font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Founder</p>
+            <h3 style="margin: 0; font-size: 34px; line-height: 38px; font-weight: 500; letter-spacing: -0.035em;">Sofía Suárez</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #565075;">5+ years in talent acquisition across Latin America and the US. As talent acquisition lead at a venture-backed SaaS startup, she hired 40+ people in 12 months and built the hiring process from scratch. She oversees every sfera search personally, with a specialist team doing the work alongside her.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+          <a href="mailto:sofia@sferapeople.com" style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px 10px 10px; border-radius: 9999px; background: rgba(255,255,255,0.6); border: 1px solid #d8d3f0; color: #14112b; font-size: 15px; font-weight: 500; text-decoration: none;"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="14" fill="#5a4bda"></rect><path d="M8 10h12v9H8z M8 10l6 5 6-5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"></path></svg>sofia@sferapeople.com</a>
+        </div>
+          </div>
+        </article>
+        <article style="flex: 1 1 420px; min-width: 0; position: relative; overflow: hidden; padding: 40px 32px 32px; border-radius: 32px; background: #0d0b24; color: #f3f1ff; display: flex; flex-direction: column; gap: 28px;">
+          <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+            <div class="blob d1" style="width: 380px; height: 380px; right: -100px; top: -80px; background: #2a20b8; filter: blur(90px);"></div>
+            <div class="blob d3" style="width: 240px; height: 240px; left: -60px; bottom: -60px; background: #6e60f0; filter: blur(80px); opacity: .6;"></div>
+            <div class="grain"></div>
+          </div>
+          <div aria-hidden="true" style="position: relative; align-self: center; width: 320px; max-width: 100%; aspect-ratio: 1 / 1;">
+            <div style="position: absolute; inset: 6%; border-radius: 50%; border: 1px dashed rgba(185,179,255,.35);"></div>
+            <div style="position: absolute; inset: 26%; border-radius: 50%; border: 1px solid rgba(185,179,255,.15);"></div>
+            <div class="orbit" style="position: absolute; inset: 0;"><span class="sat" style="transform: rotate(0deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 22px; height: 22px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(60deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 16px; height: 16px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(120deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 26px; height: 26px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(180deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 18px; height: 18px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(240deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 24px; height: 24px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(300deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span></div>
+            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 10px;">
+              <span class="gb gb-soft" style="width: 84px; height: 84px;"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+              <span style="font-size: 13px; color: #b3addb; white-space: nowrap;">Sofía, your point of contact</span>
+            </div>
+          </div>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
+            <h3 style="margin: 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em;">A team of specialists behind every search</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #b3addb;">sfera works with a trusted team of sourcers, specialist recruiters and technical screeners across Latin America. They work as your hiring team, led by Sofía.</p>
+            <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #f3f1ff;">
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>Sourcers and recruiters specialized by role family</li>
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>Technical screeners and a technical interview for tech profiles</li>
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>The same standards on every search</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding: 0 24px 112px;">
+    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
+      <h2 style="margin: 0; font-size: clamp(38px, 4.6vw, 56px); line-height: 1.02; font-weight: 500; letter-spacing: -0.04em;">Good <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">questions</em></h2>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Which roles do you hire for?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Any role: engineering, design, product, data, sales and operations. Tech is where we are deepest.</p>
+        </details>
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Where do you source candidates?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Across Latin America, mainly Argentina, Brazil, Chile, Colombia, Mexico and Uruguay.</p>
+        </details>
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">How do you vet technical candidates?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Every tech profile is pre-screened and then technically interviewed by a specialist before you meet them.</p>
+        </details>
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">What if a hire does not work out?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Every placement comes with a 30-day replacement guarantee. If a hire leaves or does not work out within 30 days of their start date, we run the search again at no extra fee.</p>
+        </details>
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Who handles contracts and payroll?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">We handle recruiting. For contracts and payroll, we can point you to the right options for your setup.</p>
+        </details>
+        <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
+          <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">How does pricing work?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">It depends on the role and the company. After a short call we send a clear proposal, no surprises.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="position: relative; overflow: hidden; padding: 112px 24px; background: #0d0b24; color: #f3f1ff;">
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+      <div class="blob d1" style="width: 560px; height: 560px; right: -140px; top: -120px; background: #2a20b8; filter: blur(90px);"></div>
+      <div class="blob d2" style="width: 340px; height: 340px; right: 280px; bottom: -140px; background: #8f86e8; filter: blur(80px); opacity: .7;"></div>
+      <div class="blob d3" style="width: 120px; height: 120px; right: 140px; top: 220px; background: #e58fb2; filter: blur(46px); opacity: .8;"></div>
+      <div class="grain"></div>
+    </div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start;">
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+        <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b3addb;">Let's talk</p>
+        <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1; font-weight: 500; letter-spacing: -0.045em;">How can we <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #b9b3ff;">help</em>?</h2>
+        <p style="margin: 0; max-width: 420px; font-size: 18px; line-height: 28px; color: #b3addb;">Tell us what you need. We will reply within 1 business day with times for a short intro call and a proposal shaped to your goals. Prefer to skip the form? <a href="https://calendar.app.google/7fG5bMan7isemjaMA" target="_blank" rel="noopener" style="color: #b9b3ff;">Book a time directly</a>.</p>
+      </div>
+      <form name="client-intake" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field" style="flex: 1 1 420px; min-width: 0; padding: 32px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 12px 40px rgba(0,0,0,.45); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="email" style="font-size: 14px; color: #b3addb;">Work email</label>
+          <input type="hidden" name="form-name" value="client-intake"><p hidden><label>Leave empty <input name="bot-field"></label></p>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="service" style="font-size: 14px; color: #b3addb;">What do you need help with</label>
+          <select id="service" name="service" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: #15123a; color: #f3f1ff;">
+            <option>Full Cycle</option>
+            <option>Sourcing Sprint</option>
+            <option>Embedded Recruiter</option>
+            <option>Process Setup</option>
+            <option>People Analytics</option>
+            <option>HR Automation</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="roles" style="font-size: 14px; color: #b3addb;">Roles you are hiring for, if any</label>
+          <input id="roles" name="roles" type="text" placeholder="Senior backend engineer, product designer, SDR" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
+            <label for="count" style="font-size: 14px; color: #b3addb;">Open positions</label>
+            <select id="count" name="open_positions" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: #15123a; color: #f3f1ff;">
+              <option>1</option>
+              <option>2 to 3</option>
+              <option>4 or more</option>
+            </select>
+          </div>
+          <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
+            <label for="when" style="font-size: 14px; color: #b3addb;">When do you need them</label>
+            <select id="when" name="timeline" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: #15123a; color: #f3f1ff;">
+              <option>As soon as possible</option>
+              <option>Within 2 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="notes" style="font-size: 14px; color: #b3addb;">Anything else we should know</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Team size, timezone, anything that matters" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 24px; border: 0; border-radius: 9999px; background: #6e60f0; color: #ffffff; font-size: 16px; font-weight: 500; cursor: pointer; box-shadow: 0 30px 80px rgba(110,96,240,0.45);">Send my request <span aria-hidden="true" style="display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9999px; background: #ffffff; color: #6e60f0;">&#8599;</span></button>
+      </form>
+    </div>
+  </section>
+
+  
+
+  <footer style="padding: 48px 24px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center;">
+      <span style="display: flex; align-items: baseline; font-size: 30px; letter-spacing: -0.05em;"><span class="wm liq">sfera</span></span>
+      <p style="margin: 0; font-size: 15px; color: #565075;">Looking for a role? <a href="/talent.html">Join the talent pool</a></p>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; font-size: 14px;">
+        <a href="mailto:contact@sferapeople.com">contact@sferapeople.com</a>
+        <span style="color: #565075;">&#169; 2026 sfera</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function(){try{
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var sp=document.querySelector('.hsph');if(!sp)return;var host=sp.closest('.stage');host=host&&host.parentElement;if(!host)return;
+if(getComputedStyle(host).position==='static')host.style.position='relative';
+var c=document.createElement('canvas');c.setAttribute('aria-hidden','true');c.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3';host.appendChild(c);
+var dpr=Math.min(window.devicePixelRatio||1,2),x=c.getContext('2d');
+function run(){var hr=host.getBoundingClientRect(),sr=sp.getBoundingClientRect();
+c.width=hr.width*dpr;c.height=hr.height*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+var cx=sr.left-hr.left+sr.width/2,cy=sr.top-hr.top+sr.height/2,R=Math.min(sr.width,sr.height)/2*0.97;
+var N=hr.width<700?60:110,P=[],i;
+for(i=0;i<N;i++){var a=Math.random()*Math.PI*2;
+P.push({sx:Math.random()*hr.width,sy:Math.random()*hr.height,tx:cx+Math.cos(a)*R,ty:cy+Math.sin(a)*R*0.98,d:Math.random()*0.9,r:1.2+Math.random()*2.6,h:Math.random()});}
+var T=3200,t0=null;
+function ease(t){return 1-Math.pow(1-t,3)}
+function f(ts){if(!t0)t0=ts;var t=ts-t0;x.clearRect(0,0,hr.width,hr.height);
+var g=Math.max(0,Math.min(1,(t-2300)/900));
+for(i=0;i<N;i++){var p=P[i],k=Math.max(0,Math.min(1,(t/1000-p.d)/1.5)),e=ease(k);
+var px=p.sx+(p.tx-p.sx)*e+Math.sin(t/300+i)*(1-e)*14,py=p.sy+(p.ty-p.sy)*e+Math.cos(t/340+i)*(1-e)*14;
+var al=(0.15+0.7*Math.min(1,k*2))*(1-g);if(al<=0)continue;
+var gr=x.createRadialGradient(px,py,0,px,py,p.r*2.4);var col=p.h<.5?'185,179,238':'242,167,195';
+gr.addColorStop(0,'rgba(255,255,255,'+al+')');gr.addColorStop(.35,'rgba('+col+','+al*.8+')');gr.addColorStop(1,'rgba('+col+',0)');
+x.fillStyle=gr;x.beginPath();x.arc(px,py,p.r*2.4,0,7);x.fill();}
+if(t<T)requestAnimationFrame(f);else c.remove();}
+requestAnimationFrame(f);}
+if(document.readyState==='complete')run();else window.addEventListener('load',run);
+}catch(e){}})();
+</script>
+</body>
+</html>
