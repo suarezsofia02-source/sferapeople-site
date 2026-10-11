@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>document.documentElement.className+=" js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>sfera | The hiring team you don't have to build</title>
@@ -107,6 +108,13 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
   .stage{opacity:.35}
 }
 @media (prefers-reduced-motion: reduce){.marq{animation:none}.plus{transition:none}.d1,.d2,.d3,.orb,.wm,.streak,.iri,.iri2,.floaty,.gb,.gb-iri{animation:none}.drops{display:none}.bubble,.bubble-img{animation:none;opacity:1;transform:none}.bglint,.bclip,.hsph,.hs-iri,.hs-floor,.orbit{animation:none}.floor{animation:none;opacity:1}.liq{filter:none}.pill,.spark{animation:none}.pill::after{animation:none;display:none}}
+
+html{scroll-behavior:smooth}
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .rvf{opacity:0;transition:opacity .9s ease;transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .rvf.in{opacity:1}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js .rv,.js .rvf{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -142,8 +150,9 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
       <a href="#top" style="display: flex; align-items: center; gap: 10px; font-size: 36px; letter-spacing: -0.05em; text-decoration: none;"><span class="gb" aria-hidden="true" style="width: 22px; height: 22px;"><span class="gb-iri"></span><span class="gb-spec"></span></span><span class="wm liq">sfera</span></a>
       <div style="display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 40px rgba(20,17,43,.10); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
         <a href="#services" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Services</a>
-        <a href="#how" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">How we work</a>
+        <a href="#how" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Process</a>
         <a href="#about" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">About</a>
+        <a href="#talent" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Talent</a>
       </div>
       <a href="https://calendar.app.google/7fG5bMan7isemjaMA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 8px 8px 20px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book a call <span aria-hidden="true" style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9999px; background: #ffffff; color: #5a4bda;">&#8599;</span></a>
     </nav>
@@ -476,10 +485,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
 
   
 
+  <section id="talent" style="padding: 56px 24px 72px; background: #f3f1fb;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding: 28px 32px; border-radius: 28px; background: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.85); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 20px 60px rgba(20,17,43,.08); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+        <h2 style="margin: 0; font-size: clamp(26px, 3vw, 34px); line-height: 1.1; font-weight: 500; letter-spacing: -0.035em;">Want to be part of our <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">hiring processes</em>?</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 26px; color: #565075;">Leave your CV and join the talent pool. We will reach out when a role fits your profile.</p>
+      </div>
+      <a href="/talent" style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 8px 8px 22px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 16px; font-weight: 500; text-decoration: none; box-shadow: 0 20px 50px rgba(90,75,218,0.28);">Join the talent pool <span aria-hidden="true" style="display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9999px; background: #ffffff; color: #5a4bda;">&#8599;</span></a>
+    </div>
+  </section>
+
   <footer style="padding: 48px 24px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center;">
       <span style="display: flex; align-items: baseline; font-size: 30px; letter-spacing: -0.05em;"><span class="wm liq">sfera</span></span>
-      <p style="margin: 0; font-size: 15px; color: #565075;">Looking for a role? <a href="/talent.html">Join the talent pool</a></p>
+      <p style="margin: 0; font-size: 15px; color: #565075;">Looking for a role? <a href="/talent">Join the talent pool</a></p>
       <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; font-size: 14px;">
         <a href="mailto:contact@sferapeople.com">contact@sferapeople.com</a>
         <span style="color: #565075;">&#169; 2026 sfera</span>
@@ -488,6 +507,26 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
   </footer>
 
 </div>
+<script>
+(function(){try{
+if(!('IntersectionObserver' in window)||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){document.documentElement.className=document.documentElement.className.replace(' js','');return}
+var T=[];
+function kids(e){return Array.prototype.filter.call(e.children,function(c){var n=c.tagName;if(n==='STYLE'||n==='SCRIPT'||n==='SVG'||n==='svg'||c.getAttribute('aria-hidden')==='true')return false;return getComputedStyle(c).position!=='absolute'})}
+function walk(e,d,base){var ks=kids(e);ks.forEach(function(c,i){
+var cs=getComputedStyle(c),k=kids(c),multi=d<2&&c.tagName!=='FORM'&&c.tagName!=='A'&&k.length>=2&&(cs.display==='grid'||cs.display==='flex');
+if(multi){walk(c,d+1,base)}else{T.push([c,Math.min((base+i)*70,420)])}})}
+var secs=document.querySelectorAll('section,footer');
+Array.prototype.forEach.call(secs,function(s,si){if(si===0||s.tagName==='FOOTER')return;
+var w=null;Array.prototype.some.call(s.children,function(c){if(c.tagName==='DIV'&&c.getAttribute('aria-hidden')!=='true'){w=c;return true}});
+if(!w)w=s;
+var ks=kids(w);
+if(ks.length<2){T.push([w,0]);return}
+walk(w,0,0)});
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:0.1,rootMargin:'0px 0px -4% 0px'});
+T.forEach(function(t){var e=t[0],st=e.getAttribute('style')||'';
+e.classList.add(/transform/.test(st)?'rvf':'rv');e.style.setProperty('--d',t[1]+'ms');io.observe(e)});
+}catch(err){document.documentElement.className=document.documentElement.className.replace(' js','')}})();
+</script>
 <script>
 (function(){try{
 if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
