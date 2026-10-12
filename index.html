@@ -33,6 +33,11 @@ details.faq[open] .plus{transform:rotate(45deg)}
 .gb-soft{background:radial-gradient(circle at 70% 78%, rgba(106,93,240,.35) 0%, rgba(106,93,240,0) 55%), radial-gradient(circle at 35% 70%, rgba(143,134,232,.45) 0%, rgba(143,134,232,0) 60%), rgba(185,179,238,.10);box-shadow:inset 0 0 0 1px rgba(185,179,238,.3), inset 3px 4px 10px rgba(201,195,255,.3), inset -4px -6px 12px rgba(30,22,144,.3), 0 6px 16px rgba(90,75,218,.25)}
 .gb-soft .gb-spec{opacity:.55}
 .sat{position:absolute;left:50%;top:50%;width:0;height:0;display:flex;align-items:center;justify-content:center}
+.bb{position:relative;display:inline-block;flex:none;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 50% 55%,rgba(255,255,255,0) 50%,rgba(201,195,255,.10) 72%,rgba(143,134,232,.30) 100%);box-shadow:inset 0 0 0 1px rgba(214,208,255,.40),inset 0 0 10px rgba(201,195,255,.20),0 6px 22px rgba(90,75,218,.28);backdrop-filter:blur(1px) saturate(130%);-webkit-backdrop-filter:blur(1px) saturate(130%);animation:blobmorph 7s ease-in-out infinite alternate,bob 5s ease-in-out infinite alternate}
+.bb-i{position:absolute;inset:-5%;border-radius:inherit;background:conic-gradient(from 0deg,#f2a7c3,#c9c3ff,#8f86e8,#e0dcff,#f7c6dc,#b9b3ee,#f2a7c3);filter:blur(2px);opacity:.7;-webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 60%,#000 78%,#000 94%,transparent 100%);mask-image:radial-gradient(circle at 50% 50%,transparent 60%,#000 78%,#000 94%,transparent 100%);animation:spin 14s linear infinite}
+.bb-s{position:absolute;left:17%;top:11%;width:30%;height:12%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.9),rgba(255,255,255,0) 72%);transform:rotate(-30deg);filter:blur(.6px)}
+.bb-s2{position:absolute;right:16%;bottom:16%;width:10%;height:6%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.7),rgba(255,255,255,0) 72%);transform:rotate(-30deg)}
+.sat .bb{flex:none}
 .sat .gb{flex:none}
 @keyframes hin{from{opacity:0;scale:.82}to{opacity:1;scale:1}}.hsph{position:absolute;inset:10%;overflow:hidden;border-radius:50% 50% 50% 50% / 55% 55% 45% 45%;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,0) 56%, rgba(201,195,255,.07) 76%, rgba(185,179,238,.20) 100%);box-shadow:inset 0 0 0 1px rgba(214,208,255,.40), inset 0 0 18px rgba(201,195,255,.22), 0 24px 60px rgba(90,75,218,.07);backdrop-filter:blur(1px) saturate(125%);-webkit-backdrop-filter:blur(1px) saturate(125%);animation:hmorph 10s ease-in-out infinite alternate, hfloat 8s ease-in-out infinite alternate, hin 1.3s ease-out 2.2s backwards}
 .hs-iri{position:absolute;inset:-4%;background:conic-gradient(from 0deg,#f2a7c3,#c9c3ff,#8f86e8,#e0dcff,#f7c6dc,#b9b3ee,#f2a7c3);filter:blur(6px);opacity:.85;-webkit-mask-image:radial-gradient(circle at 50% 50%, transparent 60%, #000 76%, #000 94%, transparent 100%);mask-image:radial-gradient(circle at 50% 50%, transparent 60%, #000 76%, #000 94%, transparent 100%);animation:spin 20s linear infinite}
@@ -107,7 +112,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
   section:first-of-type .streak{opacity:.25 !important}
   .stage{opacity:.35}
 }
-@media (prefers-reduced-motion: reduce){.marq{animation:none}.plus{transition:none}.d1,.d2,.d3,.orb,.wm,.streak,.iri,.iri2,.floaty,.gb,.gb-iri{animation:none}.drops{display:none}.bubble,.bubble-img{animation:none;opacity:1;transform:none}.bglint,.bclip,.hsph,.hs-iri,.hs-floor,.orbit{animation:none}.floor{animation:none;opacity:1}.liq{filter:none}.pill,.spark{animation:none}.pill::after{animation:none;display:none}}
+@media (prefers-reduced-motion: reduce){.bb,.bb-i{animation:none}.marq{animation:none}.plus{transition:none}.d1,.d2,.d3,.orb,.wm,.streak,.iri,.iri2,.floaty,.gb,.gb-iri{animation:none}.drops{display:none}.bubble,.bubble-img{animation:none;opacity:1;transform:none}.bglint,.bclip,.hsph,.hs-iri,.hs-floor,.orbit{animation:none}.floor{animation:none;opacity:1}.liq{filter:none}.pill,.spark{animation:none}.pill::after{animation:none;display:none}}
 
 html{scroll-behavior:smooth}
 .fl:hover{color:#4a3cc9 !important}.fi:hover{background:#4a3cc9 !important;color:#fff !important;border-color:#4a3cc9 !important}
@@ -248,10 +253,10 @@ html{scroll-behavior:smooth}
       <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end;">
         <div style="max-width: 640px;">
           <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Services</p>
-          <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">We bring clear process to every stage of <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">hiring</em>.</h2>
+          <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">We bring clear process to every part of <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">HR</em>.</h2>
         </div>      </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 0;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Hire</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Find the right people</span><span style="font-size: 16px; line-height: 24px; color: #565075;">We source, screen and shortlist candidates who fit the role and your team.</span></div>
+        <div style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 0;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Hire</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Hire with confidence</span><span style="font-size: 16px; line-height: 24px; color: #565075;">Candidates found, screened and ready to meet.</span></div>
         <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
           <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
           <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Full Cycle</h3>
@@ -262,7 +267,7 @@ html{scroll-behavior:smooth}
           <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
           <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Sourcing Sprint</h3>
           <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">Pre-screened candidates, ready for your team to interview.</p>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Your process works, but the pipeline is thin.</p></div>
+          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>You need more candidates, fast.</p></div>
         </article>
         <article style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
           <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
@@ -291,7 +296,7 @@ html{scroll-behavior:smooth}
         </article>
       </div>
       <div style="display: flex; justify-content: center; text-align: center; padding-top: 32px; border-top: 1px solid #d8d3f0;">
-        <p style="margin: 0; max-width: 720px; font-size: 18px; line-height: 28px; color: #565075; text-wrap: balance;">Not sure which one fits? <a href="#contact" style="color: #4a3cc9; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap;">Tell us what you need</a> and we will help you choose.</p>
+        <p style="margin: 0; max-width: 720px; font-size: 18px; line-height: 28px; color: #565075; text-wrap: balance;">Not sure which one fits? <a href="#contact" style="color: #4a3cc9; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap;">Tell us what you need</a> and we will help you choose the best solution for you.</p>
       </div>
     </div>
   </section>
@@ -316,7 +321,7 @@ html{scroll-behavior:smooth}
         <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
           <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">02</span>
           <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Plan</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We agree on scope, owners and timing, so everyone knows what happens next.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We define scope, owners and timing together before we start.</p>
         </li>
         <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
           <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">03</span>
@@ -356,7 +361,7 @@ html{scroll-behavior:smooth}
           <div style="display: flex; flex-direction: column; gap: 14px; padding: 4px 8px 8px;">
             <p style="margin: 0; font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Founder</p>
             <h3 style="margin: 0; font-size: 34px; line-height: 38px; font-weight: 500; letter-spacing: -0.035em;">Sofía Suárez</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #565075;">7+ years in talent acquisition across Latin America and the US. As talent acquisition lead at a venture-backed SaaS startup, she hired 40+ people in 12 months and built the hiring process from scratch. Every sfera search is led by Sofía and carried out with a team of specialist recruiters and technical screeners.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #565075;">7+ years in talent acquisition across Latin America and the US. As talent acquisition lead at a venture-backed SaaS startup, she hired 40+ people in 12 months and built the hiring process from scratch. Sofía leads every search herself, backed by a team of specialists. She is your single point of contact, so communication stays simple.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
           <a href="mailto:sofia@sferapeople.com" style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px 10px 10px; border-radius: 9999px; background: rgba(255,255,255,0.6); border: 1px solid #d8d3f0; color: #14112b; font-size: 15px; font-weight: 500; text-decoration: none;"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="14" fill="#5a4bda"></rect><path d="M8 10h12v9H8z M8 10l6 5 6-5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"></path></svg>sofia@sferapeople.com</a>
         </div>
@@ -371,19 +376,19 @@ html{scroll-behavior:smooth}
           <div aria-hidden="true" style="position: relative; align-self: center; width: 320px; max-width: 100%; aspect-ratio: 1 / 1;">
             <div style="position: absolute; inset: 6%; border-radius: 50%; border: 1px dashed rgba(185,179,255,.35);"></div>
             <div style="position: absolute; inset: 26%; border-radius: 50%; border: 1px solid rgba(185,179,255,.15);"></div>
-            <div class="orbit" style="position: absolute; inset: 0;"><span class="sat" style="transform: rotate(0deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 22px; height: 22px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(60deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 16px; height: 16px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(120deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 26px; height: 26px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(180deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 18px; height: 18px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(240deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 24px; height: 24px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span><span class="sat" style="transform: rotate(300deg) translateX(140px);"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span><span class="gb-spec"></span></span></span></div>
+            <div class="orbit" style="position: absolute; inset: 0;"><span class="sat" style="transform: rotate(0deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 22px; height: 22px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(60deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(120deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 26px; height: 26px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(180deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 18px; height: 18px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(240deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 24px; height: 24px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(300deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 14px; height: 14px;"><span class="bb-i"></span><span class="bb-s"></span></span></span></div>
             <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-              <span class="gb gb-soft" style="width: 84px; height: 84px; display: block;"><span class="gb-iri"></span><span class="gb-spec"></span></span>
+              <span class="bb" aria-hidden="true" style="width: 96px; height: 96px; display: block;"><span class="bb-i"></span><span class="bb-s"></span><span class="bb-s2"></span></span>
             </div>
           </div>
           <p style="position: relative; margin: -12px 0 0; align-self: center; text-align: center; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b3addb;">One point of contact</p>
           <div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
             <h3 style="margin: 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em;">A team of specialists behind every search</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #b3addb;">sfera works with a trusted team of sourcers, specialist recruiters and technical screeners across Latin America. They work as your hiring team, led by our management team.</p>
+            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #b3addb;">sfera works with a trusted team of sourcers, specialist recruiters and technical screeners across Latin America, the US and Europe. They work as your hiring team, led by our management team.</p>
             <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #f3f1ff;">
-              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>Sourcers and recruiters specialized by role family</li>
-              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>Technical screeners and a technical interview for tech profiles</li>
-              <li style="display: flex; gap: 12px; align-items: center;"><span class="gb gb-soft" aria-hidden="true" style="width: 14px; height: 14px;"><span class="gb-iri"></span></span>The same standards on every search</li>
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span>Sourcers and recruiters specialized by role family</li>
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span>Technical screeners and a technical interview for tech profiles</li>
+              <li style="display: flex; gap: 12px; align-items: center;"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span>The same standards on every search</li>
             </ul>
           </div>
         </article>
