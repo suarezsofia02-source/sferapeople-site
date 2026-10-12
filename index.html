@@ -114,6 +114,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
 }
 @media (prefers-reduced-motion: reduce){.bb,.bb-i{animation:none}.marq{animation:none}.plus{transition:none}.d1,.d2,.d3,.orb,.wm,.streak,.iri,.iri2,.floaty,.gb,.gb-iri{animation:none}.drops{display:none}.bubble,.bubble-img{animation:none;opacity:1;transform:none}.bglint,.bclip,.hsph,.hs-iri,.hs-floor,.orbit{animation:none}.floor{animation:none;opacity:1}.liq{filter:none}.pill,.spark{animation:none}.pill::after{animation:none;display:none}}
 
+.meta li{padding:6px 20px;border-left:1px solid rgba(74,60,201,.35)}.meta li:first-child{padding-left:0;border-left:0}
+@media (max-width:700px){.meta{display:grid !important;grid-template-columns:1fr 1fr;gap:14px 0}.meta li{padding:0 16px;border-left:1px solid rgba(74,60,201,.35)}.meta li:nth-child(odd){padding-left:0;border-left:0}}
 html{scroll-behavior:smooth}
 .fl:hover{color:#4a3cc9 !important}.fi:hover{background:#4a3cc9 !important;color:#fff !important;border-color:#4a3cc9 !important}
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
@@ -172,7 +174,7 @@ html{scroll-behavior:smooth}
           <a href="https://calendar.app.google/7fG5bMan7isemjaMA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 24px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 16px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book an intro call <span aria-hidden="true" style="display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9999px; background: #ffffff; color: #5a4bda;">&#8599;</span></a>
           <a href="#how" style="padding: 14px 24px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); color: #14112b; font-size: 16px; font-weight: 500; text-decoration: none;">See how we work</a>
         </div>
-        <p style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;"><span>2-day shortlist</span><span>30-day guarantee</span><span>Specialist team</span><span>For teams in the US, UK and EU</span></p>
+        <ul class="meta" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;"><li>2-day shortlist</li><li>30-day guarantee</li><li>Specialist team</li><li>US, UK and EU teams</li></ul>
       </div>
     </div>
   </section>
