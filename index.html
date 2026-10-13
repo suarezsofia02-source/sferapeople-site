@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sferapeople.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@500&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<link rel="stylesheet" href="/fonts.css">
 <style>
 body{margin:0;background:#f3f1fb}
 a{color:#4a3cc9}a:hover{color:#1e1690}
@@ -414,21 +414,21 @@ html{scroll-behavior:smooth}
         <input type="hidden" name="form-name" value="client-intake"><p hidden><label>Leave empty <input name="bot-field"></label></p>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="company" style="font-size: 14px; color: #b3addb;">Company name</label>
-          <input id="company" name="company" type="text" required autocomplete="organization" placeholder="Your company" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+          <input id="company" name="company" maxlength="120" type="text" required autocomplete="organization" placeholder="Your company" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
             <label for="fullname" style="font-size: 14px; color: #b3addb;">Your name</label>
-            <input id="fullname" name="name" type="text" required autocomplete="name" placeholder="First and last name" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+            <input id="fullname" name="name" maxlength="100" type="text" required autocomplete="name" placeholder="First and last name" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
           </div>
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
             <label for="role" style="font-size: 14px; color: #b3addb;">Your role</label>
-            <input id="role" name="job_title" type="text" required autocomplete="organization-title" placeholder="Founder, Head of People" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+            <input id="role" name="job_title" maxlength="100" type="text" required autocomplete="organization-title" placeholder="Founder, Head of People" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="email" style="font-size: 14px; color: #b3addb;">Work email</label>
-          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+          <input id="email" name="email" maxlength="254" type="email" required autocomplete="email" placeholder="you@company.com" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="service" style="font-size: 14px; color: #b3addb;">What do you need help with</label>
@@ -444,7 +444,7 @@ html{scroll-behavior:smooth}
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="roles" style="font-size: 14px; color: #b3addb;">Roles you are hiring for, if any</label>
-          <input id="roles" name="roles" type="text" placeholder="Senior backend engineer, product designer, SDR" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
+          <input id="roles" name="roles" maxlength="200" type="text" placeholder="Senior backend engineer, product designer, SDR" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff;">
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
@@ -467,7 +467,7 @@ html{scroll-behavior:smooth}
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="notes" style="font-size: 14px; color: #b3addb;">Anything else we should know</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Team size, timezone, anything that matters" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff; resize: vertical;"></textarea>
+          <textarea id="notes" name="notes" maxlength="2000" rows="3" placeholder="Team size, timezone, anything that matters" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #8c84d9; background: rgba(13,11,36,.5); color: #f3f1ff; resize: vertical;"></textarea>
         </div>
         <button type="submit" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; justify-content: center; padding: 15px 28px; border: 0; border-radius: 9999px; background: #6e60f0; color: #ffffff; font-size: 16px; font-weight: 500; cursor: pointer; box-shadow: 0 30px 80px rgba(110,96,240,0.45);">Send my request</button>
       </form>

@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sferapeople.com/talent.html">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@500&amp;family=Instrument+Serif:ital@1&amp;display=swap">
+<link rel="stylesheet" href="/fonts.css">
 <style>
 body{margin:0;background:#f3f1fb}
 a{color:#4a3cc9}a:hover{color:#1e1690}
@@ -131,16 +131,16 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
           <div style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px;">
             <label for="c-name" style="font-size: 14px; color: #565075;">Full name</label>
             <input type="hidden" name="form-name" value="talent-pool"><p hidden><label>Leave empty <input name="bot-field"></label></p>
-            <input id="c-name" name="name" required type="text" autocomplete="name" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
+            <input id="c-name" name="name" maxlength="100" required type="text" autocomplete="name" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
           </div>
           <div style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px;">
             <label for="c-email" style="font-size: 14px; color: #565075;">Email</label>
-            <input id="c-email" name="email" required type="email" autocomplete="email" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
+            <input id="c-email" name="email" maxlength="254" required type="email" autocomplete="email" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px;">
           <label for="c-linkedin" style="font-size: 14px; color: #565075;">LinkedIn profile</label>
-          <input id="c-linkedin" name="linkedin" type="text" inputmode="url" placeholder="linkedin.com/in/yourname" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
+          <input id="c-linkedin" name="linkedin" maxlength="200" type="text" inputmode="url" placeholder="linkedin.com/in/yourname" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
