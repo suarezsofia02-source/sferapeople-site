@@ -148,6 +148,15 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
           <label for="c-linkedin" style="font-size: 14px; color: #565075;">LinkedIn profile</label>
           <input id="c-linkedin" name="linkedin" maxlength="200" type="text" inputmode="url" placeholder="linkedin.com/in/yourname" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
         </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="c-role" style="font-size: 14px; color: #565075;">Role you're applying for</label>
+          <select id="c-role" name="role" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: #ffffff; color: #14112b;">
+            <option data-slug="general" selected>General talent pool (no specific role)</option>
+            <option data-slug="founding-engineer">Founding Engineer (healthtech, remote LatAm)</option>
+            <option data-slug="website-designer">Website Designer, Figma (remote LatAm)</option>
+            <option data-slug="java-cpp">Java or C++ Developer (New York or Chicago, on-site)</option>
+          </select>
+        </div>
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
             <label for="c-area" style="font-size: 14px; color: #565075;">Area</label>
@@ -180,6 +189,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
               <option>Colombia</option>
               <option>Mexico</option>
               <option>Uruguay</option>
+              <option>United States</option>
               <option>Other</option>
             </select>
           </div>
@@ -213,5 +223,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
     </div>
   </footer>
 </div>
+<script>
+(function () {
+  try {
+    var slug = new URLSearchParams(window.location.search).get('role');
+    var select = document.getElementById('c-role');
+    if (!slug || !select) return;
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].getAttribute('data-slug') === slug) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
