@@ -1,0 +1,43 @@
+{
+ "searches": [
+  {
+   "slug": "software-engineer-ai-mfc",
+   "title": "Software Engineer (AI)",
+   "industry": "AI-powered SaaS",
+   "country": "Argentina",
+   "modality": "Hybrid, Buenos Aires",
+   "seniority": "4+ years",
+   "posted": "2026-11-10",
+   "evergreen": false,
+   "summary": "AI is the product. Build agents and models that run in production, and own the work end to end next to the CTO.",
+   "details": "## About the role\nJoin a small engineering team where AI is the product, not a feature. You will work side by side with the CTO and own work end to end, from understanding the user's problem to shipping the solution and seeing whether it created value.\n## What you will do\nBuild and ship AI-powered features and agents that run in production, used by real customers every day.\nTrain, fine-tune and evaluate models, and decide when a model, an agent or plain code is the right answer.\nOwn product development end to end, with no handoffs: problem, design, implementation, release and measurement.\nWork with mobile engineers and the CTO on the foundations and the future of the AI systems.\n## What we are looking for\nHands-on experience building agents and training or fine-tuning models, beyond calling an API or using AI-assisted coding.\nAt least one AI product you took from idea to production, and you can explain what you decided and what result it had.\n4+ years building high-performance systems at product companies. The language is not a filter; our stack includes Node, Java, Go, Kotlin and Python.\nA startup mindset: you move fast, take ownership, thrive in ambiguity and ask smart questions about why we build things.\nClear, direct communication in English.\n## What we offer\nHybrid in Buenos Aires. Competitive salary in USD or local equivalent, equity, team retreats and a laptop and setup of your choice.",
+   "valid_through": "2026-12-10"
+  },
+  {
+   "slug": "software-engineer-infra-mfc",
+   "title": "Software Engineer (Infrastructure)",
+   "industry": "AI-powered SaaS",
+   "country": "Argentina",
+   "modality": "Hybrid, Buenos Aires",
+   "seniority": "4+ years",
+   "posted": "2026-11-10",
+   "evergreen": false,
+   "summary": "Own the infrastructure and backend foundations of a mobile-first SaaS platform, side by side with the CTO.",
+   "details": "## About the role\nOwn the infrastructure and backend foundations of a mobile-first SaaS product used daily by many businesses. You will work side by side with the CTO on the present and the future of the platform.\n## What you will do\nDesign and run scalable, reliable backend systems and the infrastructure behind them.\nPlan infrastructure and systems design, build CI/CD pipelines and deployment processes, including monitoring and rollback.\nWork directly with cloud services (AWS, Supabase, Cloudflare) and shape data workflows.\nCreate tools and libraries that make the whole team faster.\n## What we are looking for\n4+ years building and maintaining scalable systems at product companies. We work with Kotlin, Java, Go and Python, and the language is not a filter.\nYou have designed or led deployment pipelines, monitoring and rollback plans, and can explain what you decided yourself.\nSolid database design, management and optimization.\nExperience monitoring a whole architecture with tools like New Relic or Datadog.\nExperience with AI is a strong plus.\nYou move fast, take ownership, and communicate clearly in English.\n## What we offer\nHybrid in Buenos Aires. Competitive salary in USD or local equivalent, equity, team retreats and a laptop and setup of your choice.",
+   "valid_through": "2026-12-10"
+  },
+  {
+   "slug": "software-engineer-backend-nodejs-cocos",
+   "title": "Software Engineer, Back End (Node.js)",
+   "industry": "Fintech",
+   "country": "Argentina",
+   "modality": "Hybrid, Buenos Aires area",
+   "seniority": "Senior, 5+ years",
+   "posted": "2026-11-10",
+   "evergreen": false,
+   "summary": "Build and scale back end services for a fast-growing fintech. Node.js, PostgreSQL, SQL and NoSQL, AWS. Paid in USD.",
+   "details": "## About the role\nJoin the IT team of a fast-growing digital fintech to design, build, maintain and scale back end solutions. Your work will directly drive the company's technical growth and keep its applications efficient.\n## What you will do\nDesign, develop and maintain high-quality software.\nWork with the team to implement and maintain the application.\nOptimize applications for performance and scalability.\nFind and fix problems quickly.\nGive technical guidance in your areas of expertise and promote knowledge sharing and continuous learning.\n## What we are looking for\n5+ years of experience in similar roles.\nKnowledge of SQL and NoSQL databases (such as Redis, Mongo and ClickHouse).\nStrong command of Node.js, Supabase, TypeORM and PostgreSQL.\nExperience working on AWS.\nBackground in Engineering, Systems or a related field.\n## Conditions\nHybrid, with office days in Vicente Lopez, Buenos Aires province. Flexible hours, private health coverage, internet reimbursement, learning budget, wellness benefits and extended family leave. Paid in USD.",
+   "valid_through": "2026-12-10"
+  }
+ ]
+}

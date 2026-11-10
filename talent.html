@@ -148,14 +148,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
           <label for="c-linkedin" style="font-size: 14px; color: #565075;">LinkedIn profile</label>
           <input id="c-linkedin" name="linkedin" maxlength="200" type="text" inputmode="url" placeholder="linkedin.com/in/yourname" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: rgba(255,255,255,.7); color: #14112b;">
         </div>
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-          <label for="c-role" style="font-size: 14px; color: #565075;">Role you're applying for</label>
-          <select id="c-role" name="role" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: #ffffff; color: #14112b;">
-            <option data-slug="general" selected>General talent pool (no specific role)</option>
-            <option data-slug="founding-engineer">Founding Engineer (healthtech, remote LatAm)</option>
-            <option data-slug="website-designer">Website Designer, Figma (remote LatAm)</option>
-            <option data-slug="java-cpp">Java or C++ Developer (New York or Chicago, on-site)</option>
-          </select>
+        <div id="role-box" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 14px; color: #565075;">Applying for</label>
+          <div id="role-label" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #d8d3f0; background: #f3f1fb; color: #14112b;">General talent pool</div>
+          <input type="hidden" id="c-role" name="role" value="General talent pool">
+          <input type="hidden" id="c-slug" name="role_slug" value="general">
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
@@ -182,16 +179,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
         <div style="display: flex; flex-wrap: wrap; gap: 16px;">
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
             <label for="c-country" style="font-size: 14px; color: #565075;">Country</label>
-            <select id="c-country" name="country" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: #ffffff; color: #14112b;">
-              <option>Argentina</option>
-              <option>Brazil</option>
-              <option>Chile</option>
-              <option>Colombia</option>
-              <option>Mexico</option>
-              <option>Uruguay</option>
-              <option>United States</option>
-              <option>Other</option>
-            </select>
+            <select id="c-country" name="country" style="padding: 14px 16px; border-radius: 12px; border: 1px solid #6c64b8; background: #ffffff; color: #14112b;"><option>Argentina</option><option>Brazil</option><option>Chile</option><option>Colombia</option><option>Mexico</option><option>Uruguay</option><option>Australia</option><option>Austria</option><option>Belgium</option><option>Bolivia</option><option>Bulgaria</option><option>Canada</option><option>Costa Rica</option><option>Croatia</option><option>Czechia</option><option>Denmark</option><option>Dominican Republic</option><option>Ecuador</option><option>El Salvador</option><option>Estonia</option><option>Finland</option><option>France</option><option>Germany</option><option>Greece</option><option>Guatemala</option><option>Honduras</option><option>Hungary</option><option>India</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Latvia</option><option>Lithuania</option><option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Norway</option><option>Panama</option><option>Paraguay</option><option>Peru</option><option>Poland</option><option>Portugal</option><option>Romania</option><option>Serbia</option><option>Spain</option><option>Sweden</option><option>Switzerland</option><option>Turkey</option><option>Ukraine</option><option>United Kingdom</option><option>United States</option><option>Venezuela</option><option>Other</option></select>
           </div>
           <div style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px;">
             <label for="c-english" style="font-size: 14px; color: #565075;">English level</label>
@@ -227,14 +215,15 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
 (function () {
   try {
     var slug = new URLSearchParams(window.location.search).get('role');
-    var select = document.getElementById('c-role');
-    if (!slug || !select) return;
-    for (var i = 0; i < select.options.length; i++) {
-      if (select.options[i].getAttribute('data-slug') === slug) {
-        select.selectedIndex = i;
-        break;
-      }
-    }
+    if (!slug) return;
+    fetch('/searches.json').then(function (r) { return r.json(); }).then(function (d) {
+      var m = (d.searches || []).filter(function (x) { return x.slug === slug; })[0];
+      if (!m) return;
+      var t = m.title + ' (' + m.industry + ', ' + m.country + ')';
+      document.getElementById('role-label').textContent = t;
+      document.getElementById('c-role').value = t;
+      document.getElementById('c-slug').value = m.slug;
+    }).catch(function () {});
   } catch (e) {}
 })();
 </script>
