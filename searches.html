@@ -127,18 +127,29 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
       <div id="s-list" style="display: flex; flex-direction: column; gap: 14px;"></div>
       <noscript><p>Searches load with JavaScript. Meanwhile, <a href="/talent">join the talent pool</a>.</p></noscript>
       <p id="s-empty" hidden style="margin: 0; color: #565075;">No searches match this filter. <a href="/talent">Join the talent pool</a> and we will reach out when one does.</p>
-      <p style="margin: 0; font-size: 15px; color: #565075;">Do not see your profile? <a href="/talent">Join the talent pool</a>.</p>
+      <div class="cta"><div><h2>Not seeing your role?</h2><p>Join our talent pool and we will reach out when a search fits your profile.</p></div><a class="btn" href="/talent">Join the talent pool</a></div>
     </div>
   </section>
 
 
-  <footer style="padding: 48px 24px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center;">
-      <span style="display: flex; align-items: baseline; font-size: 30px; letter-spacing: -0.05em;"><span class="wm liq">sfera</span></span>
-      <p style="margin: 0; font-size: 15px; color: #565075;">Hiring instead? <a href="/">Back to sfera</a></p>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; font-size: 14px;">
-        <a href="mailto:contact@sferapeople.com">contact@sferapeople.com</a>
-        <span style="color: #565075;">&#169; 2026 sfera</span>
+  <footer style="padding: 64px 24px 32px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
+      <div style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start;">
+        <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px;">
+          <span style="display: flex; align-items: baseline; font-size: 34px; letter-spacing: -0.05em;"><span class="wm liq" style="line-height: 1;">sfera</span></span>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #565075;">Hire better. Build smarter HR.</p>
+          <a href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener" style="align-self: flex-start; padding: 12px 22px; border-radius: 9999px; background: #14112b; color: #ffffff; text-decoration: none; font-size: 15px;">Hiring? Book a call</a>
+        </div>
+        <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px;">
+          <a href="/" style="color: #14112b; text-decoration: none;">Home</a>
+          <a href="/searches" style="color: #14112b; text-decoration: none;">Searches</a>
+          <a href="/talent" style="color: #14112b; text-decoration: none;">Talent</a>
+          <a href="/privacy" style="color: #14112b; text-decoration: none;">Privacy</a>
+        </nav>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; padding-top: 24px; border-top: 1px solid #d8d3f0; font-size: 14px; color: #565075;">
+        <a href="mailto:contact@sferapeople.com" style="color: #565075;">contact@sferapeople.com</a>
+        <span>&#169; 2026 sfera</span>
       </div>
     </div>
   </footer>
@@ -151,7 +162,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
 .card p{margin:6px 0 0;font-size:15px;line-height:22px;color:#565075;max-width:560px}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#4a3cc9}
 .tags span+span::before{content:"/";margin-right:8px;color:#b9b3ee}
-.more{margin-top:12px;font-size:15px;color:#565075}.more summary{cursor:pointer;color:#4a3cc9}.dtl p{margin:8px 0 0;max-width:560px;line-height:22px}
+.tgl{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:8px 14px 8px 16px;border-radius:9999px;border:1px solid #d8d3f0;background:#fff;color:#4a3cc9;font:inherit;font-size:14px;cursor:pointer;transition:background .2s,border-color .2s}
+.tgl:hover{background:#ece9fb;border-color:#b9b3ee}.tgl svg{transition:transform .3s}.tgl[aria-expanded=true] svg{transform:rotate(180deg)}
+.dtlw{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}.dtlw.open{grid-template-rows:1fr}
+.dtl{overflow:hidden;min-height:0;visibility:hidden;transition:visibility 0s .35s}.dtlw.open .dtl{visibility:visible;transition-delay:0s}.dtl p{margin:8px 0 0;max-width:560px;line-height:22px;font-size:15px;color:#565075}.dtl p:first-child{margin-top:16px}
+.cta{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between;padding:34px 36px;border-radius:28px;background:#0d0b24;color:#f3f1fb}
+.cta h2{margin:0;font-size:28px;line-height:32px;font-weight:500;letter-spacing:-.03em}.cta p{margin:8px 0 0;font-size:16px;line-height:24px;color:#d8d3f0;max-width:480px}
+.cta .btn{background:#f3f1fb;color:#14112b !important;white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.dtlw,.tgl svg{transition:none}}
 .btn{display:inline-block;padding:12px 22px;border-radius:9999px;background:#14112b;color:#fff !important;text-decoration:none;font-size:15px}
 </style>
 <script>
@@ -169,7 +187,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,
         var h3 = el('h3'), ta = el('a', '', s.title); ta.href = '/roles/' + encodeURIComponent(s.slug); ta.style.cssText = 'color:inherit;text-decoration:none'; h3.appendChild(ta); l.appendChild(h3); l.appendChild(el('p', '', s.summary));
         var tg = el('div', 'tags'); [s.industry, s.country + ' · ' + s.modality, s.seniority].concat(s.evergreen ? ['Always open'] : []).forEach(function (x) { tg.appendChild(el('span', '', x)); });
         l.appendChild(tg); c.appendChild(l);
-        if (s.details) { var dt = el('details', 'more'); dt.appendChild(el('summary', '', 'Read more')); var dv = el('div', 'dtl'); String(s.details).split('\n').forEach(function (ln) { if (!ln.trim()) return; if (ln.indexOf('## ') === 0) { var h = el('p', '', ln.slice(3)); h.style.cssText = 'font-weight:600;color:#14112b;margin-top:16px'; dv.appendChild(h); } else dv.appendChild(el('p', '', ln)); }); dt.appendChild(dv); l.appendChild(dt); }
+        if (s.details) { var bt = el('button', 'tgl'), wr = el('div', 'dtlw'), dv = el('div', 'dtl'), id = 'd-' + s.slug; dv.id = id; bt.type = 'button'; bt.setAttribute('aria-expanded', 'false'); bt.setAttribute('aria-controls', id); bt.appendChild(el('span', '', 'View details')); bt.insertAdjacentHTML('beforeend', '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5.2l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'); String(s.details).split('\n').forEach(function (ln) { if (!ln.trim()) return; if (ln.indexOf('## ') === 0) { var h = el('p', '', ln.slice(3)); h.style.cssText = 'font-weight:600;color:#14112b;margin-top:16px'; dv.appendChild(h); } else dv.appendChild(el('p', '', ln)); }); wr.appendChild(dv); bt.onclick = function () { var o = bt.getAttribute('aria-expanded') !== 'true'; bt.setAttribute('aria-expanded', o); bt.firstChild.textContent = o ? 'Hide details' : 'View details'; wr.classList.toggle('open', o); }; l.appendChild(bt); l.appendChild(wr); }
         var a = el('a', 'btn', 'Apply'); a.href = '/talent?role=' + encodeURIComponent(s.slug); c.appendChild(a); list.appendChild(c);
       });
       empty.hidden = n > 0;

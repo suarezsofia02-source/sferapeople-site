@@ -319,6 +319,28 @@ html{scroll-behavior:smooth}
 .sv-pick{display:flex;flex-wrap:wrap;gap:8px}
 .sv-chip{padding:10px 18px;border-radius:9999px;border:1px solid #d8d3f0;background:rgba(255,255,255,.6);color:#14112b;font:inherit;font-size:15px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .sv-chip[aria-pressed=true]{background:#14112b;border-color:#14112b;color:#fff}
+.tn-live{margin:0;display:inline-flex;align-items:center;gap:10px;font:500 11.5px "Geist Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:#d8d3f0}
+.tn-live u{width:7px;height:7px;border-radius:50%;background:#5a4bda;box-shadow:0 0 0 0 rgba(90,75,218,.8);animation:tnp 2s infinite}
+@keyframes tnp{to{box-shadow:0 0 0 9px rgba(90,75,218,0)}}
+.tn{position:relative;width:100%;aspect-ratio:100/86}
+.tn-orb{position:absolute;left:50%;top:51%;border:1px solid rgba(216,211,240,.16);border-radius:50%;transform:translate(-50%,-50%) rotate(-12deg)}
+.tn-o1{width:56%;height:40%}.tn-o2{width:96%;height:72%}
+.tn svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tn-l{stroke:#d8d3f0;stroke-opacity:.22;stroke-width:.2}
+.tn-s{stroke:#f3f1fb;stroke-width:.4;stroke-linecap:round;stroke-dasharray:1.6 98.4;animation:tns 3.6s linear infinite}
+@keyframes tns{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+.tn-core{position:absolute;left:50%;top:51%;width:20%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#d8d3f0 0,#5a4bda 38%,#4a3cc9 70%,#14112b 115%);box-shadow:0 0 60px 4px rgba(90,75,218,.45)}
+.tn-n{position:absolute;transform:translate(-6px,-50%)}
+.tn-n.tn-l{transform:translate(calc(-100% + 6px),-50%)}
+.tn-i{display:flex;align-items:center;gap:10px;white-space:nowrap;animation:tnf 8s ease-in-out infinite}
+.tn-n.tn-l .tn-i{flex-direction:row-reverse;text-align:right}
+.tn-n:nth-of-type(odd) .tn-i{animation-delay:-4s}
+@keyframes tnf{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.tn-d{flex:none;width:11px;height:11px;border-radius:50%;background:#f3f1fb;box-shadow:0 0 0 5px rgba(90,75,218,.35)}
+.tn-t b{display:block;font-weight:500;font-size:14px;line-height:17px;color:#f3f1fb}
+.tn-t i{display:block;font:500 10.5px/14px "Geist Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#d8d3f0;opacity:.7;font-style:normal}
+@media (max-width:600px){.tn{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px 12px;padding-top:6px}.tn-orb,.tn svg{display:none}.tn-core{position:static;transform:none;grid-column:1/-1;width:76px;margin:0 auto 6px}.tn-n,.tn-n.tn-l{position:static;transform:none}.tn-n.tn-l .tn-i{flex-direction:row;text-align:left}.tn-i{animation:none}}
+@media (prefers-reduced-motion:reduce){.tn-i,.tn-s,.tn-live u{animation:none}.tn-s{display:none}}
 #sv-grid [hidden]{display:none !important}
 .sv{transition:border-color .25s,box-shadow .25s,transform .25s}
 .sv:hover{border-color:#b9b3ee !important;box-shadow:0 24px 60px rgba(90,75,218,.14);transform:translateY(-3px)}
@@ -489,12 +511,12 @@ html{scroll-behavior:smooth}
         <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
           <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">02</span>
           <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Plan</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We define scope, owners and timing together before we start.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We match a recruiter from our network to your stack and market, and agree scope, owners and timing together.</p>
         </li>
         <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
           <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">03</span>
           <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Do</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We run the search and send regular updates.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">The team starts the day you sign. We run the search and send regular updates.</p>
         </li>
         <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
           <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">04</span>
@@ -536,22 +558,18 @@ html{scroll-behavior:smooth}
           </div>
         </article>
         <article style="flex: 1 1 420px; min-width: 0; position: relative; overflow: hidden; padding: 40px 32px 32px; border-radius: 32px; background: #0d0b24; color: #f3f1ff; display: flex; flex-direction: column; gap: 28px;">
-          <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
-            <div class="blob d1" style="width: 380px; height: 380px; right: -100px; top: -80px; background: #2a20b8; filter: blur(90px);"></div>
-            <div class="blob d3" style="width: 240px; height: 240px; left: -60px; bottom: -60px; background: #6e60f0; filter: blur(80px); opacity: .6;"></div>
-            <div class="grain"></div>
-          </div>
-          <div aria-hidden="true" style="position: relative; align-self: center; width: 320px; max-width: 100%; aspect-ratio: 1 / 1;">
-            <div style="position: absolute; inset: 6%; border-radius: 50%; border: 1px dashed rgba(185,179,255,.35);"></div>
-            <div style="position: absolute; inset: 26%; border-radius: 50%; border: 1px solid rgba(185,179,255,.15);"></div>
-            <div class="orbit" style="position: absolute; inset: 0;"><span class="sat" style="transform: rotate(0deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 22px; height: 22px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(60deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(120deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 26px; height: 26px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(180deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 18px; height: 18px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(240deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 24px; height: 24px;"><span class="bb-i"></span><span class="bb-s"></span></span></span><span class="sat" style="transform: rotate(300deg) translateX(140px);"><span class="bb" aria-hidden="true" style="width: 14px; height: 14px;"><span class="bb-i"></span><span class="bb-s"></span></span></span></div>
-            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-              <span class="bb" aria-hidden="true" style="width: 96px; height: 96px; display: block;"><span class="bb-i"></span><span class="bb-s"></span><span class="bb-s2"></span></span>
+          <div style="position: relative; display: flex; flex-direction: column; gap: 6px;">
+            <p class="tn-live"><u></u>Ready to start today</p>
+            <div class="tn" role="img" aria-label="A network of sourcers, recruiters and technical screeners around one sfera team">
+              <div class="tn-orb tn-o1"></div><div class="tn-orb tn-o2"></div>
+              <svg viewBox="0 0 100 86" aria-hidden="true"><line class="tn-l" x1="50" y1="43.8" x2="30" y2="20.6"/><line class="tn-s" pathLength="100" x1="30" y1="20.6" x2="50" y2="43.8" style="animation-delay:-0.0s"/><line class="tn-l" x1="50" y1="43.8" x2="70" y2="18.9"/><line class="tn-s" pathLength="100" x1="70" y1="18.9" x2="50" y2="43.8" style="animation-delay:-0.6s"/><line class="tn-l" x1="50" y1="43.8" x2="26" y2="48.2"/><line class="tn-s" pathLength="100" x1="26" y1="48.2" x2="50" y2="43.8" style="animation-delay:-1.2s"/><line class="tn-l" x1="50" y1="43.8" x2="74" y2="46.4"/><line class="tn-s" pathLength="100" x1="74" y1="46.4" x2="50" y2="43.8" style="animation-delay:-1.8s"/><line class="tn-l" x1="50" y1="43.8" x2="38" y2="72.2"/><line class="tn-s" pathLength="100" x1="38" y1="72.2" x2="50" y2="43.8" style="animation-delay:-2.4s"/><line class="tn-l" x1="50" y1="43.8" x2="64" y2="70.5"/><line class="tn-s" pathLength="100" x1="64" y1="70.5" x2="50" y2="43.8" style="animation-delay:-3.0s"/></svg>
+              <span class="tn-core"></span>
+              <div class="tn-n tn-l" style="left:30%;top:24%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Sourcer</b><i>Engineering</i></span></span></div><div class="tn-n tn-r" style="left:70%;top:22%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Recruiter</b><i>Data and AI</i></span></span></div><div class="tn-n tn-l" style="left:26%;top:56%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Tech screener</b><i>Back end</i></span></span></div><div class="tn-n tn-r" style="left:74%;top:54%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Recruiter</b><i>Go to market</i></span></span></div><div class="tn-n tn-l" style="left:38%;top:84%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Sourcer</b><i>Product</i></span></span></div><div class="tn-n tn-r" style="left:64%;top:82%"><span class="tn-i"><span class="tn-d"></span><span class="tn-t"><b>Tech screener</b><i>Infrastructure</i></span></span></div>
             </div>
           </div>
           <div style="position: relative; display: flex; flex-direction: column; gap: 16px;">
-            <h3 style="margin: 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em;">A team of specialists behind every step</h3>
-            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #b3addb;">At sfera, we work with trusted sourcers, specialist recruiters and screeners across Latin America, US and Europe. They work as an extension of your company, coordinated by our management.</p>
+            <h3 style="margin: 0; font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em;">A network of specialists, <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #d8d3f0;">one team</em> on your search</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 25px; color: #b3addb;">At sfera, we work with trusted sourcers, specialist recruiters and technical screeners across Latin America, the US and Europe. They work as an extension of your company, coordinated by our management.</p>
             <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #f3f1ff;">
               <li style="display: flex; gap: 12px; align-items: center;"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span>Sourcers and recruiters specialized by role family</li>
               <li style="display: flex; gap: 12px; align-items: center;"><span class="bb" aria-hidden="true" style="width: 16px; height: 16px;"><span class="bb-i"></span><span class="bb-s"></span></span>Expert screening and interviews for engineering roles</li>
