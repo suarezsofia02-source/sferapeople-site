@@ -48,6 +48,6 @@ Contractor versus employee has legal and tax consequences that depend on the cou
 
 ## Where we fit
 
-We help US startups hire in LatAm, from sourcing to offer. We do not give legal advice, but we can help you understand what candidates in the region expect so your offer is competitive. If you are planning a first LatAm hire, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro).
+We work with companies of all sizes, from startups with no People team to companies that just raised a large round and need to grow their teams with quality. We do not give legal advice, but we can help you understand what candidates in the region expect so your offer is competitive. If you are planning a hire in LatAm, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro).
 
 You can also read our companion poll on pay: [What senior engineers in LatAm earn per month](/insights/latam-senior-engineer-salary-poll).

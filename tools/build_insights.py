@@ -97,7 +97,7 @@ def cta():
 os.makedirs("insights", exist_ok=True)
 for f in glob.glob("insights/*.html"): os.remove(f)
 arts = []
-ORDER = ["what-latam-engineers-want-from-us-jobs", "latam-senior-engineer-salary-poll", "contractor-vs-employee-eor-latam-engineers", "how-to-hire-senior-engineers-in-latam"]
+ORDER = ["what-latam-engineers-want-from-us-jobs", "latam-senior-engineer-salary-poll", "contractor-vs-employee-eor-latam-engineers", "how-to-hire-senior-engineers-in-latam", "hiring-process-before-your-first-hires", "ai-in-hr-what-to-automate-and-what-a-person-decides"]
 for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.path.basename(x)[:-3]) if os.path.basename(x)[:-3] in ORDER else 99):
     m, body = parse(p); arts.append(m)
     url = "%s/insights/%s" % (BASE, m["slug"])
