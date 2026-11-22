@@ -3,6 +3,7 @@ title: What I learned taking a company from 40 to 100 people
 slug: what-i-learned-scaling-hiring-from-40-to-100
 description: How to scale hiring from 40 to 100 employees: where the real bottleneck is, why to build the process before buying an ATS, and how to get hiring managers on board.
 date: 2026-11-22
+tag: Scaling teams
 read: 4 min read
 ---
 I was the Talent Acquisition Lead at a SaaS company in Mexico during the year it went from 40 people to 100. I was the first person there dedicated to hiring full time, I reported to the CEO and later to the CTPO, and I learned most of this the hard way.

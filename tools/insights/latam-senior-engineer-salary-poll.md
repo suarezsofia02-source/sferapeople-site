@@ -3,6 +3,7 @@ title: What senior engineers in LatAm earn per month: a poll of 524 people
 slug: latam-senior-engineer-salary-poll
 description: We asked 524 people in our network what a senior engineer in LatAm earns per month in USD. Here are the results, what they can and cannot tell you, and how to use them.
 date: 2026-11-22
+tag: Market data
 read: 5 min read
 ---
 Salary data for LatAm engineers is scattered across reports, recruiter chats and guesses. In October 2026 we ran a short poll on LinkedIn to get a clearer picture, and 524 people voted. This article shares the results and, just as important, what they do not tell you.

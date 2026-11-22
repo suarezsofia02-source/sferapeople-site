@@ -3,6 +3,7 @@ title: What LatAm engineers want from a US job: pay, setup and process
 slug: what-latam-engineers-want-from-us-jobs
 description: Four polls, 921 votes and two public market reports on hiring in Latin America. The candidate view, the market view and what founders can do with both.
 date: 2026-11-22
+tag: Market data
 read: 7 min read
 ---
 Founders hiring in Latin America usually ask the same questions. What do candidates expect to be paid? How do they want to be hired? What makes them walk away? And is it even a good moment to hire there?

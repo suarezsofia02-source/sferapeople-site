@@ -3,6 +3,7 @@ title: AI in HR and hiring: what to automate and what a person must decide
 slug: ai-in-hr-what-to-automate-and-what-a-person-decides
 description: A practical guide to AI agents and automation in HR and recruiting. Where they save time, where a human must decide, the risks to check and how to start with one workflow.
 date: 2026-11-22
+tag: AI and HR
 read: 7 min read
 ---
 AI can take a lot of repetitive work off an HR team. It can also make bad decisions faster if it is used in the wrong place. This guide explains where AI agents and automations help in HR and recruiting, where a person has to stay in charge, and how to start without creating new problems.

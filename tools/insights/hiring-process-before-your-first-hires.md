@@ -3,6 +3,7 @@ title: How to set up your hiring process before your first 10 hires
 slug: hiring-process-before-your-first-hires
 description: A simple hiring process for startups with no People team, and for fast-growing companies that need to scale hiring with quality. Steps, owners and the mistakes to avoid.
 date: 2026-11-22
+tag: Process
 read: 6 min read
 ---
 Most teams hire first and build the process later. It works for the first hire or two, and then it breaks: interviews pile up, nobody knows who decides, candidates wait weeks for an answer and the best ones take another offer.

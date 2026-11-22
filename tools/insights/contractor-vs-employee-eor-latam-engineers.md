@@ -3,6 +3,7 @@ title: Contractor, local employee or EOR: what LatAm engineers prefer
 slug: contractor-vs-employee-eor-latam-engineers
 description: We asked 203 people in our network which setup they prefer for a remote job at a US company. Here is what they chose and why the setup is a decision to make with your lawyer or accountant.
 date: 2026-11-22
+tag: Contracts
 read: 5 min read
 ---
 When a US startup hires an engineer in Latin America, one of the first decisions is the setup: how will this person legally work with you? We asked our LinkedIn network what they prefer. 203 people answered.

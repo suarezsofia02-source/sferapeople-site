@@ -4,7 +4,7 @@ Each .md has a front matter block (title, slug, description, date, read) and a s
 markdown body (## headings, paragraphs, - and 1. lists, tables, **bold**, [links](url)).
 Run from the repo root:  python3 tools/build_insights.py   then   python3 tools/build_roles.py
 (build_roles.py refreshes sitemap.xml and includes the insights pages)."""
-import re, json, html, os, glob
+import datetime, re, json, html, os, glob
 BASE = "https://sferapeople.com"
 src = open("searches.html").read()
 head = src[:src.index("</head>")]
@@ -89,6 +89,8 @@ STYLE = '''<style>
 .ic:hover{border-color:#8f86e8;background:#fff}
 .ic h2{margin:0;font-size:22px;line-height:28px;font-weight:600;letter-spacing:-.02em}
 .ic p{margin:0;font-size:16px;line-height:25px;color:#565075}
+.ic .tg{display:flex;align-items:center;gap:12px}.ic .tg b{font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#4a3cc9;background:#e9e5fb;border-radius:999px;padding:5px 11px}.ic .tg span{color:#8a84a8}
+.pub{margin-top:40px;font-size:14px;color:#8a84a8}
 .ic span{font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#4a3cc9}
 </style>
 '''
@@ -98,7 +100,7 @@ def cta():
 os.makedirs("insights", exist_ok=True)
 for f in glob.glob("insights/*.html"): os.remove(f)
 arts = []
-ORDER = ["what-latam-engineers-want-from-us-jobs", "latam-senior-engineer-salary-poll", "contractor-vs-employee-eor-latam-engineers", "how-to-hire-senior-engineers-in-latam", "hiring-process-before-your-first-hires", "ai-in-hr-what-to-automate-and-what-a-person-decides", "what-i-learned-scaling-hiring-from-40-to-100"]
+ORDER = ["how-to-hire-senior-engineers-in-latam", "contractor-vs-employee-eor-latam-engineers", "latam-senior-engineer-salary-poll", "what-i-learned-scaling-hiring-from-40-to-100", "hiring-process-before-your-first-hires", "ai-in-hr-what-to-automate-and-what-a-person-decides", "what-latam-engineers-want-from-us-jobs"]
 for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.path.basename(x)[:-3]) if os.path.basename(x)[:-3] in ORDER else 99):
     m, body = parse(p); arts.append(m)
     url = "%s/insights/%s" % (BASE, m["slug"])
@@ -114,17 +116,18 @@ for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.p
       <p class="kick"><a href="/insights">Insights</a> / %s / %s</p>
       <h1>%s</h1>
 %s
+      <p class="pub">Published %s</p>
       %s
     </article>
   </section>
 
-''' % (m["date"], html.escape(m["read"]), html.escape(m["title"]), render(body), cta())
+''' % (html.escape(m["tag"]), html.escape(m["read"]), html.escape(m["title"]), render(body), datetime.date.fromisoformat(m["date"]).strftime("%B %-d, %Y"), cta())
             + foot + "\n</div>\n</body>\n</html>\n")
     open("insights/%s.html" % m["slug"], "w").write(page)
 
 url = BASE + "/insights"
-cards = "".join('<a class="ic" href="/insights/%s"><span>%s / %s</span><h2>%s</h2><p>%s</p></a>' % (
-    m["slug"], m["date"], html.escape(m["read"]), html.escape(m["title"]), html.escape(m["description"])) for m in arts)
+cards = "".join('<a class="ic" href="/insights/%s"><div class="tg"><b>%s</b><span>%s</span></div><h2>%s</h2><p>%s</p></a>' % (
+    m["slug"], html.escape(m["tag"]), html.escape(m["read"]), html.escape(m["title"]), html.escape(m["description"])) for m in arts)
 idx = (set_head(head, "The LatAm hiring playbook | sfera", "Hiring intelligence for local and global companies: market signals on pay, contract setups and hiring processes. Practical guides and articles for companies building world class teams.", url, "website")
        + STYLE + body_open + '''  <section style="position: relative; padding: 48px 24px 112px; background: #f3f1fb;">
     <div class="art" style="max-width:1000px">

@@ -3,6 +3,7 @@ title: How to hire senior engineers in LatAm: a practical guide for US startups
 slug: how-to-hire-senior-engineers-in-latam
 description: A step-by-step guide for US founders hiring their first senior engineers in Latin America, from defining the role to closing the offer, with data from our own polls.
 date: 2026-11-22
+tag: Hiring guide
 read: 6 min read
 ---
 Hiring senior engineers in Latin America can give a US startup strong talent and good time zone overlap. It also adds decisions you do not face when you hire next door: pay, setup, process and communication. Here is how we would approach it, step by step.
