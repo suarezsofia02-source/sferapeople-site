@@ -1,7 +1,7 @@
 ---
-title: Contractor, local employee or EOR: what LATAM engineers prefer
+title: Contractor, local employee or EOR: what LatAm engineers prefer
 slug: contractor-vs-employee-eor-latam-engineers
-description: We asked 203 people in our LinkedIn network which setup they prefer for a remote job at a US company. Here is what they chose and why the setup is a decision to make with your lawyer or accountant.
+description: We asked 203 people in our network which setup they prefer for a remote job at a US company. Here is what they chose and why the setup is a decision to make with your lawyer or accountant.
 date: 2026-11-22
 read: 5 min read
 ---
@@ -9,7 +9,7 @@ When a US startup hires an engineer in Latin America, one of the first decisions
 
 ## The question
 
-"For a remote job at a US company, which setup do you prefer?" The post was aimed at LATAM engineers working for US companies. It also explained that an EOR or PEO is a third party that legally employs you on behalf of the US company.
+"For a remote job at a US company, which setup do you prefer?" The post was aimed at LatAm engineers working for US companies. It also explained that an EOR or PEO is a third party that legally employs you on behalf of the US company.
 
 ## The results
 
@@ -36,7 +36,7 @@ LinkedIn rounds each percentage, so the total adds up to 98%.
 
 ## How to read this poll
 
-This is a pulse check, not a market study. The 203 answers come from our own LinkedIn network and people chose to vote, so they cannot speak for every engineer in LATAM. We do not know the country, seniority or exact job title of each voter. Use it to understand preferences, not to decide your legal setup.
+This is a pulse check, not a market study. The 203 answers come from our own LinkedIn network and people chose to vote, so they cannot speak for every engineer in LatAm. We do not know the country, seniority or exact job title of each voter. Use it to understand preferences, not to decide your legal setup.
 
 ## What this means for founders
 
@@ -48,6 +48,6 @@ Contractor versus employee has legal and tax consequences that depend on the cou
 
 ## Where we fit
 
-We help US startups hire in LATAM, from sourcing to offer. We do not give legal advice, but we can help you understand what candidates in the region expect so your offer is competitive. If you are planning a first LATAM hire, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro).
+We help US startups hire in LatAm, from sourcing to offer. We do not give legal advice, but we can help you understand what candidates in the region expect so your offer is competitive. If you are planning a first LatAm hire, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro).
 
-You can also read our companion poll on pay: [What senior engineers in LATAM earn per month](/insights/latam-senior-engineer-salary-poll).
+You can also read our companion poll on pay: [What senior engineers in LatAm earn per month](/insights/latam-senior-engineer-salary-poll).

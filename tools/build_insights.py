@@ -92,7 +92,7 @@ STYLE = '''<style>
 </style>
 '''
 def cta():
-    return '<div class="cta"><div><h2>Planning a hire in LATAM?</h2><p>Tell us about the role and we will tell you honestly how we can help.</p></div><a class="btn" href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener">Book a call</a></div>'
+    return '<div class="cta"><div><h2>Planning a hire in LatAm?</h2><p>Tell us about the role and we will tell you honestly how we can help.</p></div><a class="btn" href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener">Book a call</a></div>'
 
 os.makedirs("insights", exist_ok=True)
 for f in glob.glob("insights/*.html"): os.remove(f)
@@ -124,12 +124,12 @@ for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.p
 url = BASE + "/insights"
 cards = "".join('<a class="ic" href="/insights/%s"><span>%s / %s</span><h2>%s</h2><p>%s</p></a>' % (
     m["slug"], m["date"], html.escape(m["read"]), html.escape(m["title"]), html.escape(m["description"])) for m in arts)
-idx = (set_head(head, "Insights | sfera", "Data and practical guides on hiring in Latin America, from polls of our LinkedIn network and from the searches we run.", url, "website")
+idx = (set_head(head, "The LatAm hiring playbook | sfera", "Pay, contract setups and hiring processes in Latin America. Practical guides and articles for companies building world class teams.", url, "website")
        + STYLE + body_open + '''  <section style="position: relative; padding: 48px 24px 112px; background: #f3f1fb;">
     <div class="art" style="max-width:1000px">
       <p class="kick">Insights</p>
-      <h1 style="font-size:clamp(40px,5vw,60px);line-height:1">What we are <em style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;">learning</em></h1>
-      <p style="max-width:560px;font-size:18px;line-height:28px;color:#565075">Polls of our LinkedIn network and practical guides on hiring in Latin America. These are pulse checks from our community, not market benchmarks.</p>
+      <h1 style="font-size:clamp(40px,5vw,60px);line-height:1">The LatAm <em style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;">hiring playbook</em></h1>
+      <p style="max-width:620px;font-size:18px;line-height:28px;color:#565075">Market signals on pay, contract setups and the trade-offs in every hiring process, from the people on the other side of the offer. Practical guides and articles for companies building world class teams.</p>
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px">%s</div>
       %s
     </div>

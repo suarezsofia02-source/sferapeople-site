@@ -1,7 +1,7 @@
 ---
-title: How to hire senior engineers in LATAM: a practical guide for US startups
+title: How to hire senior engineers in LatAm: a practical guide for US startups
 slug: how-to-hire-senior-engineers-in-latam
-description: A step-by-step guide for US founders hiring their first senior engineers in Latin America, from defining the role to closing the offer, with data from our LinkedIn polls.
+description: A step-by-step guide for US founders hiring their first senior engineers in Latin America, from defining the role to closing the offer, with data from our own polls.
 date: 2026-11-22
 read: 6 min read
 ---
@@ -9,7 +9,7 @@ Hiring senior engineers in Latin America can give a US startup strong talent and
 
 ## 1. Define the role before you define the market
 
-Write down what this person will own in the first six months. Be specific about the stack, the level of autonomy and the hours of overlap you need with your team. LATAM is not one market, and a search for "a senior engineer in LATAM" is much harder to run than a search for "a senior Node.js engineer in Argentina or Colombia with four hours of overlap."
+Write down what this person will own in the first six months. Be specific about the stack, the level of autonomy and the hours of overlap you need with your team. LatAm is not one market, and a search for "a senior engineer in LatAm" is much harder to run than a search for "a senior Node.js engineer in Argentina or Colombia with four hours of overlap."
 
 ## 2. Choose the setup early
 
@@ -19,9 +19,9 @@ That is a preference, not a legal answer. Decide the setup with your lawyer or a
 
 ## 3. Know what pay looks like, and share your range
 
-Pay for senior engineers in LATAM varies by country, stack and contract type. In a second poll of 524 people in our network, 52% chose $5K to $7K per month, and 27% chose $8K or more. That poll has limits, and we explain them in [What senior engineers in LATAM earn per month](/insights/latam-senior-engineer-salary-poll).
+Pay for senior engineers in LatAm varies by country, stack and contract type. In a second poll of 524 people in our network, 52% chose $5K to $7K per month, and 27% chose $8K or more. That poll has limits, and we explain them in [What senior engineers in LatAm earn per month](/insights/latam-senior-engineer-salary-poll).
 
-In a third poll of 127 people, 58% said salary in USD is what matters most in an offer from a US startup, and 22% said growth and ownership. The full picture is in [What LATAM engineers want from a US job](/insights/what-latam-engineers-want-from-us-jobs). Use polls like this as one input. Compare with other salary reports and with the offers you have made before. Then share your range early, in the first message or call. It filters candidates quickly and shows respect for their time.
+In a third poll of 127 people, 58% said salary in USD is what matters most in an offer from a US startup, and 22% said growth and ownership. The full picture is in [What LatAm engineers want from a US job](/insights/what-latam-engineers-want-from-us-jobs). Use polls like this as one input. Compare with other salary reports and with the offers you have made before. Then share your range early, in the first message or call. It filters candidates quickly and shows respect for their time.
 
 ## 4. Run a short, structured process
 
@@ -46,4 +46,4 @@ If you are hiring one or two engineers and have the time, you can run this proce
 
 At sfera we work in three ways: a full recruiting cycle (**Full Cycle**), a focused **Sourcing Sprint** to build a shortlist, or an **Embedded Recruiter** who works as part of your team. We also help set up the hiring process itself.
 
-If you are planning a first hire in LATAM, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro) and tell us about the role. We will tell you honestly whether and how we can help.
+If you are planning a first hire in LatAm, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro) and tell us about the role. We will tell you honestly whether and how we can help.
