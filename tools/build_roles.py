@@ -88,8 +88,9 @@ for s in data:
     open("roles/%s.html" % slug, "w").write(page)
     urls.append(url)
 
-fixed = ["/", "/talent", "/searches", "/privacy"]
+fixed = ["/", "/talent", "/searches", "/insights", "/privacy"]
+ins = sorted(os.path.basename(f)[:-5] for f in glob.glob("insights/*.html"))
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-sm += ["<url><loc>%s%s</loc></url>" % (BASE, p) for p in fixed] + ["<url><loc>%s</loc></url>" % u for u in urls]
+sm += ["<url><loc>%s%s</loc></url>" % (BASE, p) for p in fixed] + ["<url><loc>%s/insights/%s</loc></url>" % (BASE, i) for i in ins] + ["<url><loc>%s</loc></url>" % u for u in urls]
 open("sitemap.xml", "w").write("\n".join(sm + ["</urlset>"]) + "\n")
 print("built", len(urls), "role pages")
