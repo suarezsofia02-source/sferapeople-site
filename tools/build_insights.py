@@ -128,11 +128,11 @@ for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.p
 url = BASE + "/insights"
 cards = "".join('<a class="ic" href="/insights/%s"><div class="tg"><b>%s</b><span>%s</span></div><h2>%s</h2><p>%s</p></a>' % (
     m["slug"], html.escape(m["tag"]), html.escape(m["read"]), html.escape(m["title"]), html.escape(m["description"])) for m in arts)
-idx = (set_head(head, "The LatAm hiring playbook | sfera", "Hiring intelligence for local and global companies: market signals on pay, contract setups and hiring processes. Practical guides and articles for companies building world class teams.", url, "website")
+idx = (set_head(head, "People strategy hub | sfera", "Hiring intelligence for local and global companies: market signals on pay, contract setups and hiring processes. Practical guides and articles for companies building world class teams.", url, "website")
        + STYLE + body_open + '''  <section style="position: relative; padding: 48px 24px 112px; background: #f3f1fb;">
     <div class="art" style="max-width:1000px">
       <p class="kick">Insights</p>
-      <h1 style="font-size:clamp(40px,5vw,60px);line-height:1">The LatAm <em style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;">hiring playbook</em></h1>
+      <h1 style="font-size:clamp(40px,5vw,60px);line-height:1">People <em style="font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;">strategy</em> hub</h1>
       <p style="max-width:620px;font-size:18px;line-height:28px;color:#565075">Hiring intelligence for local and global companies: market signals on pay, contract setups and the trade-offs in every hiring process, from the people on the other side of the offer. Practical guides and articles for companies building world class teams.</p>
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px">%s</div>
       %s
