@@ -54,6 +54,6 @@ Know your range and your setup before the last interview. After the offer, a sho
 
 ## When to bring in help
 
-If you do not have a People team, or your hiring volume is higher than your team can handle with quality, help is worth it. At sfera we work with companies of all sizes, from startups making their first hires to companies that raised a large round and need to expand their teams with quality. We can run the full search, build the shortlist, work as an embedded recruiter or set up the process itself.
+If you do not have a People team, or your hiring volume is higher than your team can handle with quality, help is worth it. At sfera we support teams at every stage, from founders making their first hires to fast-growing companies that need to scale their teams without lowering the bar. We can run the full search, build the shortlist, work as an embedded recruiter or set up the process itself.
 
 If you want to review your hiring process, [book a call](https://cal.com/sofia-suarez-ms4fk6/intro). For the specifics of hiring in Latin America, read our [guide to hiring senior engineers in LatAm](/insights/how-to-hire-senior-engineers-in-latam).
