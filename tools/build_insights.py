@@ -93,12 +93,12 @@ STYLE = '''<style>
 </style>
 '''
 def cta():
-    return '<div class="cta"><div><h2>Planning a hire in LatAm?</h2><p>Tell us about the role and we will tell you honestly how we can help.</p></div><a class="btn" href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener">Book a call</a></div>'
+    return '<div class="cta"><div><h2>Growing your team?</h2><p>Whether it is your first hire or your fiftieth, tell us what you need and we will tell you how we can help.</p></div><a class="btn" href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener">Book a call</a></div>'
 
 os.makedirs("insights", exist_ok=True)
 for f in glob.glob("insights/*.html"): os.remove(f)
 arts = []
-ORDER = ["what-latam-engineers-want-from-us-jobs", "latam-senior-engineer-salary-poll", "contractor-vs-employee-eor-latam-engineers", "how-to-hire-senior-engineers-in-latam", "hiring-process-before-your-first-hires", "ai-in-hr-what-to-automate-and-what-a-person-decides"]
+ORDER = ["what-latam-engineers-want-from-us-jobs", "latam-senior-engineer-salary-poll", "contractor-vs-employee-eor-latam-engineers", "how-to-hire-senior-engineers-in-latam", "hiring-process-before-your-first-hires", "ai-in-hr-what-to-automate-and-what-a-person-decides", "what-i-learned-scaling-hiring-from-40-to-100"]
 for p in sorted(glob.glob("tools/insights/*.md"), key=lambda x: ORDER.index(os.path.basename(x)[:-3]) if os.path.basename(x)[:-3] in ORDER else 99):
     m, body = parse(p); arts.append(m)
     url = "%s/insights/%s" % (BASE, m["slug"])
