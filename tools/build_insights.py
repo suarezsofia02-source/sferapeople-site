@@ -62,6 +62,7 @@ def set_head(h, title, desc, url, og_type):
                   '<meta property="og:description" content="%s">' % html.escape(desc, quote=True))
     h = h.replace('content="website"', 'content="%s"' % og_type)
     h = h.replace("https://sferapeople.com/searches", url)
+    if 'rel="canonical"' in h: return h
     return h.replace('<link rel="icon"', '<link rel="canonical" href="%s">\n<link rel="icon"' % url, 1)
 
 STYLE = '''<style>

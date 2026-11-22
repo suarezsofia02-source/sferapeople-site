@@ -3,7 +3,7 @@
 with JobPosting structured data for Google for Jobs, and refreshes sitemap.xml.
 Run from the repo root after editing searches.json:  python3 tools/build_roles.py
 Evergreen (always open) entries get a page but no JobPosting markup."""
-import json, html, os, glob
+import json, html, os, glob, subprocess, datetime
 BASE = "https://sferapeople.com"
 LOC = {  # slug -> (locality, region, country, employmentType or None)
     "software-engineer-ai-mfc": ("Buenos Aires", "Buenos Aires", "AR", "FULL_TIME"),
@@ -11,6 +11,17 @@ LOC = {  # slug -> (locality, region, country, employmentType or None)
     "software-engineer-backend-nodejs-cocos": ("Vicente Lopez", "Buenos Aires", "AR", None),
 }
 LISTS = {"What you will do", "What we are looking for"}
+
+TODAY = datetime.date.today().isoformat()
+def lastmod(path):
+    """Commit date of the file, or today if it has uncommitted changes (e.g. just regenerated)."""
+    try:
+        if subprocess.run(["git", "status", "--porcelain", "--", path], capture_output=True, text=True).stdout.strip():
+            return TODAY
+        d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path], capture_output=True, text=True).stdout.strip()
+        return d or TODAY
+    except Exception:
+        return TODAY
 src = open("searches.html").read()
 head = src[:src.index("</head>")]
 body_open = src[src.index("</head>"):src.index('  <section style="position: relative; padding: 48px 24px 112px')]
@@ -88,9 +99,12 @@ for s in data:
     open("roles/%s.html" % slug, "w").write(page)
     urls.append(url)
 
-fixed = ["/", "/talent", "/searches", "/insights", "/privacy"]
+fixed = {"/": "index.html", "/talent": "talent.html", "/searches": "searches.html", "/insights": "insights.html", "/privacy": "privacy.html"}
 ins = sorted(os.path.basename(f)[:-5] for f in glob.glob("insights/*.html"))
+def entry(loc, f): return "<url><loc>%s</loc><lastmod>%s</lastmod></url>" % (loc, lastmod(f))
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-sm += ["<url><loc>%s%s</loc></url>" % (BASE, p) for p in fixed] + ["<url><loc>%s/insights/%s</loc></url>" % (BASE, i) for i in ins] + ["<url><loc>%s</loc></url>" % u for u in urls]
+sm += [entry(BASE + p, f) for p, f in fixed.items()]
+sm += [entry("%s/insights/%s" % (BASE, i), "insights/%s.html" % i) for i in ins]
+sm += [entry(u, "roles/%s.html" % u.rsplit("/", 1)[1]) for u in urls]
 open("sitemap.xml", "w").write("\n".join(sm + ["</urlset>"]) + "\n")
 print("built", len(urls), "role pages")
