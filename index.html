@@ -188,17 +188,6 @@ html{scroll-behavior:smooth}
     </div>
   </section>
 
-  <section aria-label="Results" style="padding: 56px 24px 24px; background: #f3f1fb; border-top: 1px solid #d8d3f0;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
-        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">28<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> days</em></span><span style="font-size: 15px; color: #565075;">Average time to fill</span></div>
-        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">40+<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> hires</em></span><span style="font-size: 15px; color: #565075;">In 12 months</span></div>
-        <div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: clamp(56px, 7vw, 88px); line-height: 1; font-weight: 500; letter-spacing: -0.05em; color: #14112b;">92%<em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;"> yes</em></span><span style="font-size: 15px; color: #565075;">Offer acceptance rate</span></div>
-      </div>
-      <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Track record of the team behind sfera</p>
-    </div>
-  </section>
-
   <section aria-label="Roles we hire" style="padding: 24px 0 56px; background: #f3f1fb;">
     <div style="overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);">
       <div class="marq">
@@ -255,6 +244,13 @@ html{scroll-behavior:smooth}
 .cs-card:hover img{filter:none;opacity:1}
 .cs-card span{font:500 10px/13px 'Geist Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#8a85a8;text-align:center}
 @media (max-width:700px){.cs-rail{height:300px}}
+.cs-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px;padding-top:24px;border-top:1px solid #d8d3f0}
+.cs-stats div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cs-stats b{font-size:clamp(30px,3.4vw,42px);line-height:1;font-weight:500;letter-spacing:-.04em;color:#14112b;font-variant-numeric:tabular-nums}
+.cs-stats b em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9;font-size:.6em;letter-spacing:0}
+.cs-stats span{font-size:13px;line-height:18px;color:#565075}
+.cs-stats p{grid-column:1/-1;margin:4px 0 0;font:500 10px/14px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a85a8}
+@media (max-width:420px){.cs-stats{gap:10px}.cs-stats span{font-size:12px}}
 @media (prefers-reduced-motion:reduce){.cs-track{animation:none}.cs-q{opacity:1;transform:none;transition:none}.cs-rail{height:auto;-webkit-mask-image:none;mask-image:none;flex-wrap:wrap}.cs-col{overflow:visible}.cs-col.rev{display:block}.cs-dup{display:none}}
 </style>
 <section aria-label="Clients" style="padding: 72px 24px 0;">
@@ -263,6 +259,12 @@ html{scroll-behavior:smooth}
       <p class="cs-eyebrow">Teams we hire for</p>
       <blockquote style="margin:0"><p>&ldquo;sfera formalized our playbooks and aligned managers on what we were looking for. That is how we hired faster and better.&rdquo;</p></blockquote>
       <figcaption class="cs-who"><img src="/logos/cometa.png" alt="Cometa"><span>Co-founder and CPTO, Cometa (EdTech SaaS)</span></figcaption>
+      <div class="cs-stats" aria-label="Results">
+        <div><b data-to="28">28<em> days</em></b><span>Average time to fill</span></div>
+        <div><b data-to="40" data-suf="+">40+<em> hires</em></b><span>In 12 months</span></div>
+        <div><b data-to="92" data-suf="%">92%<em> yes</em></b><span>Offer acceptance rate</span></div>
+        <p>Track record of the team behind sfera</p>
+      </div>
     </figure>
     <div class="cs-rail" aria-label="Companies we hire for">
       <div class="cs-col"><div class="cs-track">
@@ -289,7 +291,10 @@ html{scroll-behavior:smooth}
     Array.prototype.forEach.call(t.children,function(c,idx){ if(idx>=h){c.setAttribute('aria-hidden','true');c.classList.add('cs-dup');} });
   });
   var q=document.getElementById('cs-q');
-  if('IntersectionObserver' in window){ new IntersectionObserver(function(e,o){ if(e[0].isIntersecting){q.classList.add('in');o.disconnect();} },{threshold:.35}).observe(q); } else { q.classList.add('in'); }
+  function countUp(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    q.querySelectorAll('.cs-stats b').forEach(function(el){ var to=+el.dataset.to, suf=el.dataset.suf||'', em=el.querySelector('em').outerHTML, s0=performance.now();
+      (function st(n){ var k=Math.min(1,(n-s0)/1400), v=Math.round(to*(1-Math.pow(1-k,3))); el.innerHTML=v+suf+em; if(k<1) requestAnimationFrame(st); })(s0); }); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(e,o){ if(e[0].isIntersecting){q.classList.add('in');countUp();o.disconnect();} },{threshold:.35}).observe(q); } else { q.classList.add('in'); }
 })();
 </script>
 <style>
@@ -814,13 +819,6 @@ var cards=document.querySelectorAll('.sv');
 if(!rm){Array.prototype.forEach.call(cards,function(a){a.addEventListener('mouseenter',function(){play(a)});a.addEventListener('focusin',function(){play(a)})});
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){play(en.target);io.unobserve(en.target)}})},{threshold:.6});
 Array.prototype.forEach.call(cards,function(a){io.observe(a)})}}
-/* count up the three results (final values unchanged) */
-var res=document.querySelector('section[aria-label="Results"]');
-if(res&&!rm&&'IntersectionObserver' in window){var nums=[];
-Array.prototype.forEach.call(res.querySelectorAll('span'),function(sp){var t=sp.firstChild;if(t&&t.nodeType===3){var m=/^(\d+)(\D*)$/.exec(t.nodeValue.trim());if(m)nums.push({n:t,v:+m[1],s:m[2]})}});
-var done=false,ro=new IntersectionObserver(function(es){if(done||!es[0].isIntersecting)return;done=true;ro.disconnect();var t0=null,D=1300;
-function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/D),e=1-Math.pow(1-k,3);nums.forEach(function(o){o.n.nodeValue=Math.round(o.v*e)+o.s});if(k<1)requestAnimationFrame(f)}
-requestAnimationFrame(f)},{threshold:.4});ro.observe(res)}
 /* hero sphere follows the cursor a little */
 var sp=document.querySelector('.hsph'),hero=document.querySelector('section');
 if(sp&&hero&&!rm&&window.matchMedia&&matchMedia('(pointer: fine)').matches){
