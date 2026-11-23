@@ -2,9 +2,11 @@
  "version": 1,
  "updated": "2026-11-22",
  "fallback": {
-  "text": "I am not sure about that one, and I would rather not guess. A short call is the best way to get a real answer.",
+  "text": "I am not sure about that one, and I would rather not guess. You can book a short call or write to us on WhatsApp for a real answer.",
   "link": "https://cal.com/sofia-suarez-ms4fk6/intro",
-  "linkLabel": "Book an intro call"
+  "linkLabel": "Book an intro call",
+  "secondLink": "https://wa.me/5493487533184?text=Hi%20sfera%2C%20I%27d%20like%20to%20talk%20about%20hiring.",
+  "secondLabel": "Write to us on WhatsApp"
  },
  "greeting": "Hi, I am sfera's automated assistant. I answer with pre-written answers and a person reviews everything that matters. What would you like to know?",
  "categories": [
@@ -541,10 +543,12 @@
     "meeting",
     "reach"
    ],
-   "a": "The easiest way is a short intro call. You can also write to sofia@sferapeople.com.",
+   "a": "The easiest way is a short intro call. You can also write to us on WhatsApp or at sofia@sferapeople.com.",
    "status": "site",
    "link": "https://cal.com/sofia-suarez-ms4fk6/intro",
-   "linkLabel": "Book an intro call"
+   "linkLabel": "Book an intro call",
+   "link2": "https://wa.me/5493487533184?text=Hi%20sfera%2C%20I%27d%20like%20to%20talk%20about%20hiring.",
+   "link2Label": "Write to us on WhatsApp"
   },
   {
    "id": 33,
@@ -565,5 +569,9 @@
    "link": "/talent",
    "linkLabel": "Go to the talent page"
   }
- ]
+ ],
+ "whatsapp": {
+  "link": "https://wa.me/5493487533184?text=Hi%20sfera%2C%20I%27d%20like%20to%20talk%20about%20hiring.",
+  "label": "Write to us on WhatsApp"
+ }
 }
