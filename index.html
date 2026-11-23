@@ -177,8 +177,16 @@ html{scroll-behavior:smooth}
 .cs{display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px;max-width:1100px;margin:0 auto}
 .cs-q{flex:1 1 340px;min-width:0;opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .cs-q.in{opacity:1;transform:none}
-.cs-roles{flex:1 1 100%;min-width:0;padding-top:28px;border-top:1px solid #d8d3f0}
-.cs-roles .cs-eyebrow{margin:0 0 14px;font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a85a8}
+.cs-fam{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px;padding-top:20px;border-top:1px solid #d8d3f0}
+.cs-fam-l{font:500 10px/14px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a85a8;margin-right:2px}
+.cs-fam-l:not(:first-child){flex-basis:100%;margin:6px 0 0}
+.fam{padding:6px 12px;border-radius:999px;border:1px solid #d8d3f0;background:rgba(255,255,255,.7);font-size:13px;line-height:18px;color:#14112b}
+.fam.main{position:relative;overflow:hidden;border-color:#5a4bda;background:#5a4bda;color:#fff;font-weight:500}
+.fam.main::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-100%);animation:famsh 4.5s ease-in-out 1.2s infinite}
+@keyframes famsh{30%,100%{transform:translateX(100%)}}
+.cs-q.in .fam{animation:famin .5s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(.5s + var(--i) * 90ms)}
+@keyframes famin{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.fam.main::after,.cs-q.in .fam{animation:none}}
 .cs-q .cs-eyebrow{margin:0 0 16px;font-style:normal;font-size:11px;line-height:14px;font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a85a8}
 .cs-q blockquote p{margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(26px,3vw,36px);line-height:1.22;color:#14112b}
 .cs-who{display:flex;align-items:center;gap:12px;margin-top:20px}
@@ -217,6 +225,12 @@ html{scroll-behavior:smooth}
         <div><b data-to="92" data-suf="%">92%<em> yes</em></b><span>Offer acceptance rate</span></div>
         <p>Track record of the team behind sfera</p>
       </div>
+      <div class="cs-fam" aria-label="Roles we hire for">
+        <span class="cs-fam-l">Our specialty</span>
+        <span class="fam main" style="--i:0">Engineering</span>
+        <span class="cs-fam-l">We also build teams for</span>
+        <span class="fam" style="--i:1">Sales</span><span class="fam" style="--i:2">Operations</span><span class="fam" style="--i:3">Marketing</span><span class="fam" style="--i:4">Product</span>
+      </div>
     </figure>
     <div class="cs-rail" aria-label="Companies we hire for">
       <div class="cs-col"><div class="cs-track">
@@ -231,41 +245,6 @@ html{scroll-behavior:smooth}
         <div class="cs-card"><img src="/logos/omis.png" alt="Omis"><span>Web design and SEO, US</span></div>
         <div class="cs-card"><img src="/logos/cocos.png" alt="Cocos"><span>Fintech, Argentina</span></div>
       </div></div>
-    </div>
-    <div class="cs-roles" aria-label="Roles we hire for">
-      <p class="cs-eyebrow">Roles we hire for</p>
-      <div style="overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);">
-      <div class="marq">
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Backend Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Product Designer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">SDR</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Operations Lead</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Head of Engineering</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Sales Lead</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Data Analyst</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Engineering Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Account Executive</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Product Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">DevOps Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Customer Success Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">QA Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Marketing Lead</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Backend Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Product Designer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">SDR</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Operations Lead</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Head of Engineering</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Sales Lead</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Data Analyst</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Engineering Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Account Executive</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Product Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">DevOps Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Customer Success Manager</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">QA Engineer</span>
-        <span style="white-space: nowrap; padding: 9px 18px; border: 1px solid #d8d3f0; border-radius: 9999px; background: #ffffff; font-size: 14px; color: #14112b;">Marketing Lead</span>
-      </div>
-      </div>
     </div>
   </div>
 </section>

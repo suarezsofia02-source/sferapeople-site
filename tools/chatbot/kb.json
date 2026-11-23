@@ -2,7 +2,7 @@
  "version": 2,
  "updated": "2026-11-22",
  "source": "Sheet \"sfera Chatbot Answers\", rows with status Ready",
- "greeting": "Hi, I am sfera's automated assistant. I answer with pre-written answers and a person reviews everything that matters. What would you like to know?",
+ "greeting": "Hi, I am sfera's assistant. Ask me anything about our services, how a search works or the roles we have open.",
  "fallback": {
   "text": "I am not sure about that one, and I would rather not guess. You can book a short call or write to us on WhatsApp for a real answer.",
   "link": "https://cal.com/sofia-suarez-ms4fk6/intro",
