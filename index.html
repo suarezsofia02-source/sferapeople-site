@@ -115,7 +115,7 @@ select{-webkit-appearance:none;appearance:none;padding-right:44px !important;bac
 input:not([type=checkbox]),select,textarea{width:100%}
 input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #4a3cc9;outline-offset:2px}
 @media (max-width: 700px){
-  nav[aria-label="Main"] > div{display:none !important}
+  nav[aria-label="Main"] > .nav-links{display:none !important}
   section:first-of-type .blob{opacity:.28 !important}
   section:first-of-type .streak{opacity:.25 !important}
   .stage{opacity:.35}
@@ -142,40 +142,24 @@ html{scroll-behavior:smooth}
       <filter id="liq" x="-10%" y="-30%" width="120%" height="160%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="3"><animate attributeName="baseFrequency" dur="10s" values="0.012 0.03;0.02 0.014;0.012 0.03" repeatCount="indefinite"></animate></feTurbulence><feDisplacementMap in="SourceGraphic" scale="4"></feDisplacementMap></filter>
     </svg>
     <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
-      <div class="blob d1" style="width: 620px; height: 620px; right: -120px; top: -80px; background: #1e1690; filter: blur(90px); opacity: .8;"></div>
-      <div class="blob d2" style="width: 420px; height: 420px; right: 300px; top: 120px; background: #8f86e8; filter: blur(70px); opacity: .85;"></div>
-      <div class="blob d3" style="width: 360px; height: 360px; right: 40px; bottom: -160px; background: #b9b3ee; filter: blur(70px);"></div>
-      <div class="blob d2" style="width: 170px; height: 170px; right: 500px; top: 50px; background: #b3163f; filter: blur(60px); opacity: .7;"></div>
-      <div class="streak" style="width: 520px; right: 120px; top: 190px; opacity: .85;"></div>
-      <div class="streak" style="width: 380px; right: 260px; top: 250px; opacity: .7; animation-duration: 20s;"></div>
-      <div class="streak" style="width: 460px; right: 60px; top: 320px; opacity: .8; animation-duration: 13s; animation-direction: alternate-reverse;"></div>
-      <div class="streak" style="width: 300px; right: 340px; top: 400px; opacity: .6; animation-duration: 18s;"></div>
-      <div class="streak" style="width: 420px; right: 140px; top: 470px; opacity: .75; animation-duration: 15s; animation-direction: alternate-reverse;"></div>
-      <div class="stage">
-        <div class="hs-floor"></div>
-        <div class="hsph">
-          <span class="hs-iri"></span>
-          <span class="hs-spec"></span>
-          <span class="hs-spec2"></span>
-        </div>
-      </div>
+      <canvas id="hfield" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
       <div class="grain"></div>
     </div>
 
     <nav aria-label="Main" style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
       <a href="#top" style="display: flex; align-items: center; gap: 10px; font-size: 36px; letter-spacing: -0.05em; text-decoration: none;"><span class="gb" aria-hidden="true" style="width: 22px; height: 22px; margin-top: 7px;"><span class="gb-iri"></span><span class="gb-spec"></span></span><span class="wm liq" style="line-height: 1;">sfera</span></a>
-      <div style="display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 40px rgba(20,17,43,.10); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
+      <div class="nav-links" style="display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; border-radius: 9999px; background: rgba(255,255,255,0.42); border: 1px solid rgba(255,255,255,0.75); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 40px rgba(20,17,43,.10); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);">
         <a href="#services" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Services</a>
-        <a href="#how" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Process</a>
+        <a href="#how" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">How we work</a>
         <a href="#about" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">About</a>
-        <a href="/searches" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Searches</a><a href="/insights" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Insights</a>
-        <a href="#talent" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Talent</a>
+        <a href="/insights" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Insights</a>
+        <a href="/searches" style="padding: 10px 18px; border-radius: 9999px; font-size: 15px; color: #14112b; text-decoration: none;">Open roles</a>
       </div>
-      <a href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 8px 20px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book a call</a>
+      <div style="display: flex; align-items: center; gap: 10px;"><a class="nav-wa" href="https://wa.me/5493487533184?text=Hi%20sfera%2C%20I%27d%20like%20to%20talk%20about%20hiring." target="_blank" rel="noopener" aria-label="Write to us on WhatsApp"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg></a><a href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 8px 20px; border-radius: 9999px; background: #5a4bda; color: #ffffff; font-size: 15px; font-weight: 500; text-decoration: none; box-shadow: 0 30px 80px rgba(90,75,218,0.30);">Book a call</a></div>
     </nav>
 
-    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding-top: 144px;">
-      <div style="max-width: 720px; display: flex; flex-direction: column; gap: 24px;">
+    <div class="hero-in" style="position: relative; max-width: 1200px; margin: 0 auto; padding-top: 144px; pointer-events: none;">
+      <div style="max-width: 720px; display: flex; flex-direction: column; gap: 24px; pointer-events: auto;">
         <span class="pill" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 500; color: #4a3cc9;"><span class="spark" aria-hidden="true" style="color: #4a3cc9; font-size: 22px; line-height: 1;">&#10022;</span>Recruiting, HR operations and AI solutions</span>
         <h1 style="margin: 0; font-size: clamp(44px, 6.4vw, 84px); line-height: .98; font-weight: 500; letter-spacing: -0.05em; text-wrap: balance;">Hire better.<br>Build smarter <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.01em; color: #4a3cc9;">HR</em>.</h1>
         <p style="margin: 0; max-width: 540px; font-size: 19px; line-height: 30px; color: #565075;">We find the right people and build a clear process, with the tools that keep both working, so hiring feels lighter.</p>
@@ -253,7 +237,7 @@ html{scroll-behavior:smooth}
 @media (max-width:420px){.cs-stats{gap:10px}.cs-stats span{font-size:12px}}
 @media (prefers-reduced-motion:reduce){.cs-track{animation:none}.cs-q{opacity:1;transform:none;transition:none}.cs-rail{height:auto;-webkit-mask-image:none;mask-image:none;flex-wrap:wrap}.cs-col{overflow:visible}.cs-col.rev{display:block}.cs-dup{display:none}}
 </style>
-<section aria-label="Clients" style="padding: 72px 24px 0;">
+<section id="clients" aria-label="Clients" style="padding: 72px 24px 0; scroll-margin-top: 24px;">
   <div class="cs">
     <figure id="cs-q" class="cs-q" style="margin:0">
       <p class="cs-eyebrow">Teams we hire for</p>
@@ -418,6 +402,102 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){.wa{transition:none}}
 .hsph{transition:translate .5s cubic-bezier(.2,.7,.2,1)}
 @media (prefers-reduced-motion:reduce){.sv.play .ex *{animation:none !important}.sv,.hsph{transition:none}.sv:hover{transform:none}}
+
+.nav-wa{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:9999px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.8);color:#14112b;text-decoration:none;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background .2s,color .2s}
+.nav-wa:hover{background:#14112b;color:#fff}
+@media (max-width:760px){.hero-in{padding-top:330px !important}}
+/* services: 3D deck */
+.sd{position:relative;border-radius:32px;background:radial-gradient(60% 70% at 25% 20%,rgba(201,195,255,.55),transparent 70%),radial-gradient(50% 60% at 85% 75%,rgba(242,167,195,.35),transparent 70%),linear-gradient(180deg,#f8f6ff,#efecfa);border:1px solid #d8d3f0;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) 320px;min-height:560px}
+.sd-stage{position:relative;perspective:1400px;min-height:520px;touch-action:pan-y;cursor:grab;overflow:hidden}
+.sd-stage:active{cursor:grabbing}
+.sd-rig{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.sd-card{position:absolute;left:50%;top:50%;width:min(270px,64vw);margin-left:calc(min(270px,64vw) / -2);margin-top:-170px;height:340px;background:#fff;border:1px solid #d8d3f0;border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:10px;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.2,.85,.2,1),opacity .5s,box-shadow .5s,filter .5s;box-shadow:0 30px 60px rgba(20,17,43,.12);cursor:pointer;user-select:none;scroll-margin-top:24px}
+.sd-card.on{box-shadow:0 40px 80px rgba(74,60,201,.25);border-color:#8f86e8}
+.sd-card.off{opacity:0;pointer-events:none}
+.sd-card:focus-visible{outline:2px solid #4a3cc9;outline-offset:3px}
+.sd-art{height:120px;border-radius:14px;position:relative;overflow:hidden;flex:none}
+.sd-top{display:flex;justify-content:space-between;align-items:center}
+.sd-tag{font:500 10px/14px 'Geist Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#4a3cc9;background:#e9e5fb;border-radius:999px;padding:4px 10px}
+.sd-num{font:500 10px/14px 'Geist Mono',monospace;letter-spacing:.08em;color:#8a84a8;font-variant-numeric:tabular-nums}
+.sd-card h3{margin:2px 0 0;font-size:22px;line-height:28px;font-weight:500;letter-spacing:-.03em}
+.sd-card p{margin:0;font-size:14px;line-height:21px;color:#565075}
+.sd-a1{background:linear-gradient(135deg,#f1effd,#e0dcff)}.sd-a2{background:linear-gradient(135deg,#fcedf3,#f7c6dc)}.sd-a3{background:linear-gradient(135deg,#e0dcff,#c9c3ff)}.sd-a4{background:linear-gradient(135deg,#f1effd,#fcedf3)}.sd-a5{background:linear-gradient(135deg,#fcedf3,#e0dcff)}.sd-a6{background:linear-gradient(135deg,#e0dcff,#f7c6dc)}
+.sd-row{position:absolute;left:14px;right:14px;height:22px;border-radius:8px;background:rgba(255,255,255,.85);display:flex;align-items:center;gap:8px;padding:0 8px;font:500 9px/1 'Geist Mono',monospace;color:#4a3cc9;letter-spacing:.06em}
+.sd-row i{width:10px;height:10px;border-radius:50%;background:#c9c3ff}.sd-row b{flex:1;height:5px;border-radius:3px;background:#e9e6f8}
+.sd-bars{position:absolute;inset:16px;display:flex;flex-direction:column;justify-content:space-around}
+.sd-bars u{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.8);text-decoration:none}.sd-bars u b{display:block;height:100%;border-radius:4px;background:#f2a7c3;width:var(--w)}
+.sd-chat{position:absolute;inset:16px;display:flex;flex-direction:column;gap:8px;justify-content:center}
+.sd-chat span{align-self:flex-start;background:#fff;border-radius:10px 10px 10px 2px;padding:6px 10px;font-size:10px;color:#14112b}
+.sd-chat span:last-child{align-self:flex-end;background:#4a3cc9;color:#fff;border-radius:10px 10px 2px 10px}
+.sd-flow{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;padding:12px}
+.sd-flow span{font:500 9px/1 'Geist Mono',monospace;letter-spacing:.06em;text-transform:uppercase;background:#fff;border-radius:999px;padding:7px 9px;color:#4a3cc9}
+.sd-chart{position:absolute;left:16px;right:16px;bottom:14px;top:18px;display:flex;align-items:flex-end;gap:8px}
+.sd-chart b{flex:1;height:var(--h);border-radius:5px 5px 2px 2px;background:rgba(255,255,255,.9)}.sd-chart b.hi{background:#5a4bda}
+.sd-auto{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px}
+.sd-auto span{background:#fff;border-radius:8px;padding:7px 8px;font-size:9.5px;color:#14112b}.sd-auto i{width:14px;height:2px;background:#8f86e8;border-radius:2px}
+.sd-card.on .sd-bars u b{animation:sdgrow 1.2s cubic-bezier(.2,.8,.2,1)}
+.sd-card.on .sd-chart b{animation:sdrise 1s cubic-bezier(.2,.8,.2,1) backwards}
+.sd-card.on .sd-row{animation:sdslide .7s cubic-bezier(.2,.8,.2,1) backwards}.sd-card.on .sd-row:nth-child(2){animation-delay:.1s}.sd-card.on .sd-row:nth-child(3){animation-delay:.2s}
+.sd-card.on .sd-chat span,.sd-card.on .sd-flow span,.sd-card.on .sd-auto span{animation:sdpop .5s cubic-bezier(.2,.8,.2,1) backwards}.sd-card.on .sd-chat span:last-child{animation-delay:.35s}
+@keyframes sdgrow{from{width:0}}@keyframes sdrise{from{height:0}}@keyframes sdslide{from{transform:translateX(-30px);opacity:0}}@keyframes sdpop{from{transform:scale(.6);opacity:0}}
+.sd-panel{position:relative;z-index:20;border-left:1px solid #d8d3f0;background:rgba(250,249,255,.94);padding:26px;display:flex;flex-direction:column;gap:14px}
+.sd-k{font:500 11px/16px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#4a3cc9}
+.sd-panel h4{margin:0;font-size:34px;line-height:38px;font-weight:500;letter-spacing:-.04em}
+.sd-panel h4 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#4a3cc9}
+.sd-panel p{margin:0;font-size:15px;line-height:23px;color:#565075}
+.sd-best{padding-top:14px;border-top:1px solid #e9e6f8;font-size:14px;line-height:20px}
+.sd-best span{display:block;margin-bottom:4px;font:500 11px/16px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#4a3cc9}
+.sd-go{margin-top:auto;display:inline-flex;align-self:flex-start;align-items:center;gap:8px;background:#14112b;color:#fff !important;text-decoration:none;border-radius:999px;padding:11px 18px;font-size:14px;font-weight:500}
+.sd-swap{animation:sdfade .45s ease}@keyframes sdfade{from{opacity:0;transform:translateY(8px)}}
+.sd-bar{grid-column:1/-1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 14px;border-top:1px solid #d8d3f0;background:rgba(255,255,255,.6)}
+.sd-chip{font:500 13px/18px Geist,'Helvetica Neue',Arial,sans-serif;padding:8px 14px;border-radius:999px;border:1px solid transparent;background:transparent;color:#14112b;cursor:pointer}
+.sd-chip[aria-pressed="true"]{background:#14112b;color:#fff}
+.sd-nav{margin-left:auto;display:flex;align-items:center;gap:8px}
+.sd-count{font:500 12px/1 'Geist Mono',monospace;color:#565075;font-variant-numeric:tabular-nums;min-width:56px;text-align:center}
+.sd-arrow{width:38px;height:38px;border-radius:50%;border:1px solid #d8d3f0;background:#fff;color:#14112b;font-size:16px;cursor:pointer}
+.sd-chip:focus-visible,.sd-arrow:focus-visible,.sd-go:focus-visible{outline:2px solid #4a3cc9;outline-offset:2px}
+.sd-prog{position:absolute;left:0;top:0;height:3px;background:#4a3cc9;width:0;z-index:30}.sd-prog.run{animation:sdprog var(--t) linear forwards}@keyframes sdprog{to{width:100%}}
+@media (max-width:860px){.sd{grid-template-columns:1fr}.sd-stage{min-height:440px}.sd-panel{border-left:0;border-top:1px solid #d8d3f0}.sd-panel h4{font-size:28px;line-height:32px}.sd-card{height:320px;margin-top:-160px}.sd-nav{margin-left:0;width:100%;justify-content:space-between}}
+@media (prefers-reduced-motion:reduce){.sd-card,.sd-rig{transition:none}.sd-card.on *{animation:none !important}.sd-swap{animation:none}.sd-prog{display:none}}
+/* how we work: timeline */
+.hw-head{display:flex;flex-wrap:wrap;gap:20px 48px;justify-content:space-between;align-items:flex-end}
+.hw-eye{margin:0 0 14px;font:500 12px/16px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#c9c3ff;display:flex;gap:10px;align-items:center}.hw-eye i{font-style:normal;color:#f2a7c3}
+.hw-h2{margin:0;font-size:clamp(34px,4.4vw,54px);line-height:1.04;font-weight:500;letter-spacing:-.045em;max-width:680px;text-wrap:balance}
+.hw-h2 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#c9c3ff}
+.hw-sub{margin:0;max-width:360px;font-size:16px;line-height:25px;color:#b8b3d9}
+.hw-tl{position:relative;list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.hw-rail{position:absolute;left:9px;right:calc(25% - 22px);top:9px;height:2px;background:rgba(214,208,255,.16);border-radius:2px}
+.hw-fill{position:absolute;left:0;top:0;height:100%;width:calc(var(--p,0) * 100%);border-radius:2px;background:linear-gradient(90deg,#8f86e8,#f2a7c3);box-shadow:0 0 16px rgba(242,167,195,.5)}
+.hw-spark{position:absolute;top:50%;left:calc(var(--p,0) * 100%);width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(242,167,195,.22),0 0 20px #f2a7c3;opacity:calc(1 - var(--done,0))}
+.hw-step{position:relative;display:flex;flex-direction:column;gap:18px;min-width:0}
+.hw-dot{width:20px;height:20px;border-radius:50%;background:#0d0b24;border:2px solid rgba(214,208,255,.16);position:relative;z-index:1;transition:border-color .5s,background .5s,box-shadow .5s}
+.hw-card{flex:1;padding:22px;border-radius:22px;background:rgba(255,255,255,.035);border:1px solid rgba(214,208,255,.16);display:flex;flex-direction:column;gap:12px;opacity:.35;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1),border-color .6s,background .6s}
+.hw-top{display:flex;align-items:baseline;justify-content:space-between}
+.hw-card h3{margin:0;font-size:26px;line-height:30px;font-weight:500;letter-spacing:-.035em}
+.hw-n{font:500 11px/14px 'Geist Mono',monospace;letter-spacing:.08em;color:#7d77a8}
+.hw-card p{margin:0;font-size:14px;line-height:22px;color:#b8b3d9}
+.hw-lane{border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.hw-lane.ai{background:linear-gradient(135deg,rgba(143,134,232,.16),rgba(90,75,218,.06));border:1px solid rgba(143,134,232,.26)}
+.hw-lane.you{background:linear-gradient(135deg,rgba(242,167,195,.13),rgba(247,198,220,.04));border:1px solid rgba(242,167,195,.24)}
+.hw-lane small{font:500 9.5px/13px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase}
+.hw-lane.ai small{color:#c9c3ff}.hw-lane.you small{color:#f7c6dc}
+.hw-chips{display:flex;flex-wrap:wrap;gap:5px}
+.hw-chips span{font-size:12px;line-height:16px;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.07);color:#f3f1ff;opacity:0;transform:translateY(5px) scale(.95);transition:opacity .4s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.hw-lane.you span{font-size:13px;line-height:19px;opacity:0;transition:opacity .5s .3s}
+.hw-step.on .hw-dot{border-color:#f2a7c3;background:#f2a7c3;box-shadow:0 0 0 6px rgba(242,167,195,.15),0 0 20px rgba(242,167,195,.6)}
+.hw-step.on .hw-card{opacity:1;transform:none;border-color:rgba(201,195,255,.26);background:rgba(255,255,255,.055)}
+.hw-step.on .hw-n{color:#c9c3ff}
+.hw-step.on .hw-chips span{opacity:1;transform:none}
+.hw-step.on .hw-chips span:nth-child(2){transition-delay:.1s}.hw-step.on .hw-chips span:nth-child(3){transition-delay:.2s}.hw-step.on .hw-chips span:nth-child(4){transition-delay:.3s}.hw-step.on .hw-chips span:nth-child(5){transition-delay:.4s}.hw-step.on .hw-chips span:nth-child(6){transition-delay:.5s}
+.hw-step.on .hw-lane.you span{opacity:1}
+.hw-foot{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid rgba(214,208,255,.16)}
+.hw-pair{display:flex;flex-wrap:wrap;gap:12px 32px;flex:1 1 560px}.hw-pair div{flex:1 1 240px;min-width:0}
+.hw-pair small{display:block;margin-bottom:4px;font:500 10px/14px 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#c9c3ff}
+.hw-pair p{margin:0;font-size:15px;line-height:22px}
+.hw-btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;background:#5a4bda;color:#fff !important;text-decoration:none;font-size:15px;font-weight:500;box-shadow:0 12px 30px rgba(90,75,218,.4);white-space:nowrap}
+@media (max-width:1020px){.hw-tl{grid-template-columns:repeat(2,minmax(0,1fr))}.hw-rail{display:none}.hw-dot{display:none}}
+@media (max-width:640px){.hw-tl{grid-template-columns:1fr;gap:14px;padding-left:30px}.hw-rail{display:block;left:9px;right:auto;top:6px;bottom:6px;width:2px;height:auto}.hw-fill{width:100%;height:calc(var(--p,0) * 100%)}.hw-spark{left:50%;top:calc(var(--p,0) * 100%)}.hw-dot{display:block;position:absolute;left:-30px;top:22px}.hw-card{padding:18px}}
+@media (prefers-reduced-motion:reduce){.hw-card,.hw-chips span,.hw-lane.you span,.hw-dot{transition:none}.hw-card{opacity:1;transform:none}.hw-chips span,.hw-lane.you span{opacity:1;transform:none}}
 </style>
   <section id="services" style="padding: 112px 24px;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
@@ -426,71 +506,26 @@ html{scroll-behavior:smooth}
           <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #565075;">Services</p>
           <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">We bring clear process to every part of <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #4a3cc9;">HR</em>.</h2>
         </div>
-        <div class="sv-pick" role="group" aria-label="Filter services">
-          <button type="button" class="sv-chip" data-pick="all" aria-pressed="true">All services</button>
-          <button type="button" class="sv-chip" data-pick="hire" aria-pressed="false">I need to hire</button>
-          <button type="button" class="sv-chip" data-pick="build" aria-pressed="false">I need to fix my process</button>
-        </div>
       </div>
-      <div id="sv-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <div data-g="hire" style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 0;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Hire</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Hire with confidence</span><span style="font-size: 16px; line-height: 24px; color: #565075;">Candidates screened and ready to meet.</span></div>
-        <article class="sv" data-g="hire" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Full Cycle</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">We find, interview and close the right person. You meet only finalists.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">Your shortlist</span><div class="ex-rows"><div class="ex-row"><i></i><b></b><em>Finalist</em></div><div class="ex-row"><i></i><b style="width:46%"></b><em>Finalist</em></div><div class="ex-row"><i></i><b style="width:38%"></b><em>Finalist</em></div></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>One key role, no time to recruit.</p></div>
-        </article>
-        <article class="sv" data-g="hire" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Sourcing Sprint</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">Pre-screened candidates, ready for your team to interview.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">Your pipeline</span><div class="ex-bars"><div><span>Sourced</span><u><b style="--w:100%"></b></u></div><div><span>Screened</span><u><b style="--w:62%"></b></u></div><div><span>Ready to interview</span><u><b style="--w:34%"></b></u></div></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>You need a full pipeline of candidates quickly.</p></div>
-        </article>
-        <article class="sv" data-g="hire" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Embedded Recruiter</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">A dedicated recruiter inside your team and tools.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">Inside your tools</span><div class="ex-chat"><p><i></i>Three candidates ready for your review</p><p><i></i>Thursday interview confirmed</p></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Several roles at once.</p></div>
-        </article>
-        <div data-g="build" style="grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-top: 24px;"><span style="font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9;">Build</span><span style="font-size: 26px; line-height: 32px; font-weight: 500; letter-spacing: -0.03em; color: #14112b;">Build the process</span><span style="font-size: 16px; line-height: 24px; color: #565075;">Set up how you hire, measure it and automate the routine.</span></div>
-        <article class="sv" data-g="build" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">Process Setup</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">A clear, repeatable way to hire that your team can own.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">Your hiring playbook</span><div class="ex-flow"><span>Brief</span><span>Screen</span><span>Interview</span><span>Offer</span></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Hiring is slow or depends on one person.</p></div>
-        </article>
-        <article class="sv" data-g="build" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">People Analytics</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">Live dashboards that show what works and what to improve.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">What is working</span><div class="ex-chart"><b style="--h:38%"></b><b style="--h:56%"></b><b style="--h:44%"></b><b style="--h:72%"></b><b style="--h:60%"></b><b class="hi" style="--h:92%"></b></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Decisions are made without data.</p></div>
-        </article>
-        <article class="sv" data-g="build" style="padding: 32px; border-radius: 24px; background: #ffffff; border: 1px solid #d8d3f0; display: flex; flex-direction: column; gap: 12px;">
-          <span class="gb" aria-hidden="true"><span class="gb-iri"></span><span class="gb-spec"></span></span>
-          <h3 style="margin: 8px 0 0; font-size: 24px; line-height: 30px; font-weight: 500; letter-spacing: -0.03em;">HR Automation</h3>
-          <p style="margin: 0; font-size: 16px; line-height: 24px; color: #565075;">We automate routine HR work, so your team can focus on key decisions.</p>
-          <div class="ex" aria-hidden="true"><span class="ex-cap">Runs on its own</span><div class="ex-auto"><span>New applicant</span><i></i><span>Scorecard</span><i></i><span>Team alert</span></div></div>
-          <div style="margin: auto 0 0; padding-top: 16px; border-top: 1px solid #e9e6f8; font-size: 14px; line-height: 20px; color: #14112b;"><p style="margin: 0;"><span style="font: 500 11px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #4a3cc9; display: block; margin-bottom: 4px;">Best when</span>Your team repeats tasks a tool could do.</p></div>
-        </article>
-      </div>
-      <div class="ai" aria-label="How we use AI">
-        <div class="ai-head">
-          <p class="ai-eye"><span aria-hidden="true">&#10022;</span> AI inside</p>
-          <h3>AI handles the routine. People make the <em>calls</em>.</h3>
-          <p class="ai-note">AI assists our recruiters at every step. A person reviews every candidate and makes every decision.</p>
+      <div class="sd" id="sd">
+        <div class="sd-prog" id="sd-prog"></div>
+        <div class="sd-stage" id="sd-stage" aria-roledescription="carousel" aria-label="Services">
+          <div class="sd-rig" id="sd-rig">
+        <article class="sd-card" id="full-cycle" tabindex="0" data-g="hire"><div class="sd-art sd-a1" aria-hidden="true"><div class="sd-row" style="top:18px"><i></i><b></b>FINALIST</div><div class="sd-row" style="top:49px"><i></i><b style="flex:.6"></b>FINALIST</div><div class="sd-row" style="top:80px"><i></i><b style="flex:.45"></b>FINALIST</div></div><div class="sd-top"><span class="sd-tag">Hire</span><span class="sd-num">01 / 06</span></div><h3>Full Cycle</h3><p>We find, interview and close the right person. You meet only finalists.</p></article>
+        <article class="sd-card" id="sourcing-sprint" tabindex="0" data-g="hire"><div class="sd-art sd-a2" aria-hidden="true"><div class="sd-bars"><u><b style="--w:100%"></b></u><u><b style="--w:62%"></b></u><u><b style="--w:34%"></b></u></div></div><div class="sd-top"><span class="sd-tag">Hire</span><span class="sd-num">02 / 06</span></div><h3>Sourcing Sprint</h3><p>A batch of pre-filtered candidates, ready for your team to take forward.</p></article>
+        <article class="sd-card" id="embedded-recruiter" tabindex="0" data-g="hire"><div class="sd-art sd-a3" aria-hidden="true"><div class="sd-chat"><span>Three candidates ready for your review</span><span>Thursday interview confirmed</span></div></div><div class="sd-top"><span class="sd-tag">Hire</span><span class="sd-num">03 / 06</span></div><h3>Embedded Recruiter</h3><p>A dedicated recruiter inside your team and tools.</p></article>
+        <article class="sd-card" id="process-setup" tabindex="0" data-g="build"><div class="sd-art sd-a4" aria-hidden="true"><div class="sd-flow"><span>Brief</span><span>Screen</span><span>Interview</span><span>Offer</span></div></div><div class="sd-top"><span class="sd-tag">Build</span><span class="sd-num">04 / 06</span></div><h3>Process Setup</h3><p>A clear, repeatable way to hire that your team can own.</p></article>
+        <article class="sd-card" id="people-analytics" tabindex="0" data-g="build"><div class="sd-art sd-a5" aria-hidden="true"><div class="sd-chart"><b style="--h:38%"></b><b style="--h:56%"></b><b style="--h:44%"></b><b style="--h:72%"></b><b style="--h:60%"></b><b class="hi" style="--h:92%"></b></div></div><div class="sd-top"><span class="sd-tag">Build</span><span class="sd-num">05 / 06</span></div><h3>People Analytics</h3><p>Live dashboards that show what works and what to improve.</p></article>
+        <article class="sd-card" id="hr-automation" tabindex="0" data-g="build"><div class="sd-art sd-a6" aria-hidden="true"><div class="sd-auto"><span>New applicant</span><i></i><span>Scorecard</span><i></i><span>Team alert</span></div></div><div class="sd-top"><span class="sd-tag">Build</span><span class="sd-num">06 / 06</span></div><h3>HR Automation</h3><p>We automate routine HR work, so your team can focus on key decisions.</p></article>
+          </div>
         </div>
-        <ul class="ai-list">
-          <li><b>Sourcing agents</b><span>Agents search and compare profiles against your brief.</span></li>
-          <li><b>Interview notes</b><span>Notes and scorecards generated from every call.</span></li>
-          <li><b>Candidate presentations</b><span>Built from the interview, ready for you to review.</span></li>
-          <li><b>Pipeline updates</b><span>Automatic alerts to your team as candidates move.</span></li>
-          <li><b>For your team</b><span>Job descriptions, scorecards, screening kits, hiring dashboards and candidate replies.</span></li>
-        </ul>
+        <aside class="sd-panel" id="sd-panel" aria-live="polite"></aside>
+        <div class="sd-bar" role="group" aria-label="Filter services">
+          <button type="button" class="sd-chip" data-pick="all" aria-pressed="true">All services</button>
+          <button type="button" class="sd-chip" data-pick="hire" aria-pressed="false">I need to hire</button>
+          <button type="button" class="sd-chip" data-pick="build" aria-pressed="false">I need to fix my process</button>
+          <div class="sd-nav"><button type="button" class="sd-arrow" id="sd-prev" aria-label="Previous service">&#8592;</button><span class="sd-count" id="sd-count">01 / 06</span><button type="button" class="sd-arrow" id="sd-next" aria-label="Next service">&#8594;</button></div>
+        </div>
       </div>
       <div style="display: flex; justify-content: center; text-align: center; padding-top: 32px; border-top: 1px solid #d8d3f0;">
         <p style="margin: 0; max-width: 720px; font-size: 18px; line-height: 28px; color: #565075; text-wrap: balance;">Not sure which one fits? <a href="#contact" style="color: #4a3cc9; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap;">Tell us what you need</a> and we will help you choose the best solution for you.</p>
@@ -505,41 +540,26 @@ html{scroll-behavior:smooth}
       <div class="grain"></div>
     </div>
     <div style="position: relative; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px;">
-      <div style="max-width: 900px;">
-        <p style="margin: 0 0 12px; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b3addb;">How we work</p>
-        <h2 style="margin: 0; font-size: 52px; line-height: 56px; font-weight: 500; letter-spacing: -0.04em;">Easy to start. <span style="white-space: nowrap;">Easy to <em style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: #b9b3ff;">work with</em></span></h2>
+      <div class="hw-head">
+        <div>
+          <p class="hw-eye">How we work <i aria-hidden="true">&#10022;</i> AI inside</p>
+          <h2 class="hw-h2">Easy to start. AI handles the routine. People make the <em>calls</em>.</h2>
+        </div>
+        <p class="hw-sub">AI assists our recruiters at every step. A person reviews every candidate and makes every decision.</p>
       </div>
-      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
-          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">01</span>
-          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Talk</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">A short call. You tell us what you need.</p>
-        </li>
-        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
-          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">02</span>
-          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Plan</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We match a recruiter from our network to your stack and market, and agree scope, owners and timing together.</p>
-        </li>
-        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
-          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">03</span>
-          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Do</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">The team starts the day you sign. We run the search and send regular updates.</p>
-        </li>
-        <li style="padding: 28px; border-radius: 24px; background: rgba(185,179,255,0.10); border: 1px solid rgba(255,255,255,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: flex; flex-direction: column; gap: 10px;">
-          <span style="font: 500 13px/16px 'Geist Mono', monospace; color: #b9b3ff;">04</span>
-          <h3 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Improve</h3>
-          <p style="margin: 0; font-size: 15px; line-height: 23px; color: #b3addb;">We review results together, so the process improves with every hire.</p>
-        </li>
+      <ol class="hw-tl" id="hw-tl">
+        <div class="hw-rail" aria-hidden="true"><div class="hw-fill"></div><div class="hw-spark"></div></div>
+        <li class="hw-step"><span class="hw-dot" aria-hidden="true"></span><div class="hw-card"><div class="hw-top"><h3>Talk</h3><span class="hw-n">01</span></div><p>A short call. You tell us what you need.</p><div class="hw-lane ai"><small>AI handles</small><div class="hw-chips"><span>Kickoff prep</span><span>Tech skills, if needed</span><span>Soft skills to evaluate and prioritize</span><span>Business information prep</span><span>Market context</span></div></div><div class="hw-lane you"><small>You decide</small><span>What matters for the role and the team.</span></div></div></li>
+        <li class="hw-step"><span class="hw-dot" aria-hidden="true"></span><div class="hw-card"><div class="hw-top"><h3>Plan</h3><span class="hw-n">02</span></div><p>We match a recruiter from our network to your stack and market, and agree scope, owners and timing.</p><div class="hw-lane ai"><small>AI handles</small><div class="hw-chips"><span>Job descriptions</span><span>Scorecards</span><span>Screening kits</span></div></div><div class="hw-lane you"><small>You decide</small><span>Scope, owners and timing.</span></div></div></li>
+        <li class="hw-step"><span class="hw-dot" aria-hidden="true"></span><div class="hw-card"><div class="hw-top"><h3>Do</h3><span class="hw-n">03</span></div><p>The team starts the day you sign. We run the search and send regular updates.</p><div class="hw-lane ai"><small>AI handles</small><div class="hw-chips"><span>Sourcing agents</span><span>Interview notes</span><span>Candidate presentations</span><span>Candidate experience</span><span>Updates</span><span>Reminders</span></div></div><div class="hw-lane you"><small>You decide</small><span>Who moves forward and who gets the offer.</span></div></div></li>
+        <li class="hw-step"><span class="hw-dot" aria-hidden="true"></span><div class="hw-card"><div class="hw-top"><h3>Improve</h3><span class="hw-n">04</span></div><p>We review results together, so the process improves with every hire.</p><div class="hw-lane ai"><small>AI handles</small><div class="hw-chips"><span>Data analysis</span><span>Dashboards</span><span>Reports</span></div></div><div class="hw-lane you"><small>You decide</small><span>What to change for the next hire.</span></div></div></li>
       </ol>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <div style="padding: 28px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; gap: 10px;">
-          <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b9b3ff;">What you do</p>
-          <p style="margin: 0; font-size: 17px; line-height: 27px; color: #f3f1ff;">Tell us what matters, give quick feedback and make the calls.</p>
+      <div class="hw-foot">
+        <div class="hw-pair">
+          <div><small>What you do</small><p>Tell us what matters, give quick feedback and make the calls.</p></div>
+          <div><small>What we do</small><p>Handle the work, own the details and keep it all in one place.</p></div>
         </div>
-        <div style="padding: 28px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; gap: 10px;">
-          <p style="margin: 0; font: 500 12px/16px 'Geist Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: #b9b3ff;">What we do</p>
-          <p style="margin: 0; font-size: 17px; line-height: 27px; color: #f3f1ff;">Handle the work, own the details and keep it all in one place.</p>
-        </div>
+        <a class="hw-btn" href="https://cal.com/sofia-suarez-ms4fk6/intro" target="_blank" rel="noopener">Start with a short call &#8599;</a>
       </div>
     </div>
   </section>
@@ -678,13 +698,13 @@ html{scroll-behavior:smooth}
     </div>
   </section>
 
-  <section id="faq" style="padding: 8px 24px 104px; background: #f3f1fb;">
+  <section id="faq" style="scroll-margin-top: 24px; padding: 8px 24px 104px; background: #f3f1fb;">
     <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px;">
       <h2 style="margin: 0; font-size: clamp(38px, 4.6vw, 56px); line-height: 1.02; font-weight: 500; letter-spacing: -0.04em;">Q<span style="color: #4a3cc9; font-weight: 500;">&amp;</span>A</h2>
       <div style="display: flex; flex-direction: column; gap: 12px;">
         <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Which roles do you hire for?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
-          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">We hire across engineering, data, product, design, sales, marketing, operations and G&amp;A, from individual contributors to team leads and managers. Engineering and data are where we go deepest, but every search follows the same steps: a clear brief, structured screening and a shortlist you can act on.</p>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">We hire across engineering, data, product, design, sales, marketing, operations and G&amp;A, from individual contributors to managers and executives. Engineering and data are where we go deepest, but every search follows the same steps: a clear brief, structured screening and a shortlist you can act on.</p>
         </details>
         <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Where do you source candidates?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
@@ -696,7 +716,7 @@ html{scroll-behavior:smooth}
         </details>
         <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">What if a hire does not work out?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
-          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Our placements come with a replacement guarantee. If a hire does not work out within the guarantee period, we rerun the search at no extra fee. The exact terms are written into the proposal before we start.</p>
+          <p style="margin: 14px 0 0; font-size: 16px; line-height: 25px; color: #565075;">Our placements come with a replacement guarantee. The terms depend on each client and their needs, and we write them into the proposal before we start. If a hire does not work out within the agreed period, we rerun the search at no extra fee.</p>
         </details>
         <details class="faq" style="padding: 22px 28px; border-radius: 20px; background: #ffffff; border: 1px solid #d8d3f0;">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 20px; line-height: 28px; font-weight: 500; letter-spacing: -0.02em;">Who handles contracts and payroll?<span class="plus" aria-hidden="true" style="font-size: 28px; line-height: 1; color: #4a3cc9;">+</span></summary>
@@ -723,12 +743,12 @@ html{scroll-behavior:smooth}
         </div>
         <nav aria-label="Footer: services" style="display: flex; flex-direction: column; gap: 10px;">
           <p style="margin:0 0 14px;font:500 12px/16px 'Geist Mono', monospace;letter-spacing:.1em;text-transform:uppercase;color:#565075;">Services</p>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Full Cycle</a>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Sourcing Sprint</a>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Embedded Recruiter</a>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Process Setup</a>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">People Analytics</a>
-          <a class="fl" href="#services" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">HR Automation</a>
+          <a class="fl" href="#full-cycle" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Full Cycle</a>
+          <a class="fl" href="#sourcing-sprint" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Sourcing Sprint</a>
+          <a class="fl" href="#embedded-recruiter" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Embedded Recruiter</a>
+          <a class="fl" href="#process-setup" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Process Setup</a>
+          <a class="fl" href="#people-analytics" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">People Analytics</a>
+          <a class="fl" href="#hr-automation" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">HR Automation</a>
         </nav>
         <nav aria-label="Footer: company" style="display: flex; flex-direction: column; gap: 10px;">
           <p style="margin:0 0 14px;font:500 12px/16px 'Geist Mono', monospace;letter-spacing:.1em;text-transform:uppercase;color:#565075;">Company</p>
@@ -736,6 +756,7 @@ html{scroll-behavior:smooth}
           <a class="fl" href="#about" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">About</a>
           <a class="fl" href="#faq" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Q&amp;A</a>
           <a class="fl" href="/insights" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Insights</a>
+          <a class="fl" href="/searches" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Open roles</a>
           <a class="fl" href="/talent" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Join the talent pool</a>
           <a class="fl" href="/privacy" style="color:#14112b;text-decoration:none;font-size:15px;line-height:22px;">Privacy policy</a>
         </nav>
@@ -776,55 +797,83 @@ e.classList.add(/transform/.test(st)?'rvf':'rv');e.style.setProperty('--d',t[1]+
 </script>
 <script>
 (function(){try{
-if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-var sp=document.querySelector('.hsph');if(!sp)return;var host=sp.closest('.stage');host=host&&host.parentElement;if(!host)return;
-if(getComputedStyle(host).position==='static')host.style.position='relative';
-var c=document.createElement('canvas');c.setAttribute('aria-hidden','true');c.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3';host.appendChild(c);
-var dpr=Math.min(window.devicePixelRatio||1,2),x=c.getContext('2d');
-function run(){var hr=host.getBoundingClientRect(),sr=sp.getBoundingClientRect();
-c.width=hr.width*dpr;c.height=hr.height*dpr;x.setTransform(dpr,0,0,dpr,0,0);
-var cx=sr.left-hr.left+sr.width/2,cy=sr.top-hr.top+sr.height/2,R=Math.min(sr.width,sr.height)/2*0.97;
-var N=hr.width<700?60:110,P=[],i;
-for(i=0;i<N;i++){var a=Math.random()*Math.PI*2;
-P.push({sx:Math.random()*hr.width,sy:Math.random()*hr.height,tx:cx+Math.cos(a)*R,ty:cy+Math.sin(a)*R*0.98,d:Math.random()*0.9,r:1.2+Math.random()*2.6,h:Math.random()});}
-var T=3200,t0=null;
+var cv=document.getElementById('hfield');if(!cv||!cv.getContext)return;var ctx=cv.getContext('2d'),host=cv.parentNode.parentNode;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var W,H,cx,cy,R,P=[],t0,rotY=0,tiltX=-.25,tiltY=0,mx=-1e4,my=-1e4,vis=true;
+var cols=[[90,75,218],[143,134,232],[201,195,255],[242,167,195],[74,60,201]];
+function build(){var dpr=Math.min(window.devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+var mob=W<760;R=mob?Math.min(W*.34,140):Math.min(H*.32,W*.2,250);cx=mob?W/2:W*.74;cy=mob?235:Math.min(H*.5,420);
+var N=mob?600:1400,g=Math.PI*(3-Math.sqrt(5));P=[];
+for(var i=0;i<N;i++){var y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=g*i;P.push({x:Math.cos(th)*r,y:y,z:Math.sin(th)*r,sx:Math.random()*W,sy:H+20+Math.random()*H*.6,d:Math.random()*1.3+(1-y)*.35,s:Math.random()*.9+.6,c:cols[(i*7)%cols.length],w:Math.random()*6.283})}}
 function ease(t){return 1-Math.pow(1-t,3)}
-function f(ts){if(!t0)t0=ts;var t=ts-t0;x.clearRect(0,0,hr.width,hr.height);
-var g=Math.max(0,Math.min(1,(t-2300)/900));
-for(i=0;i<N;i++){var p=P[i],k=Math.max(0,Math.min(1,(t/1000-p.d)/1.5)),e=ease(k);
-var px=p.sx+(p.tx-p.sx)*e+Math.sin(t/300+i)*(1-e)*14,py=p.sy+(p.ty-p.sy)*e+Math.cos(t/340+i)*(1-e)*14;
-var al=(0.15+0.7*Math.min(1,k*2))*(1-g);if(al<=0)continue;
-var gr=x.createRadialGradient(px,py,0,px,py,p.r*2.4);var col=p.h<.5?'185,179,238':'242,167,195';
-gr.addColorStop(0,'rgba(255,255,255,'+al+')');gr.addColorStop(.35,'rgba('+col+','+al*.8+')');gr.addColorStop(1,'rgba('+col+',0)');
-x.fillStyle=gr;x.beginPath();x.arc(px,py,p.r*2.4,0,7);x.fill();}
-if(t<T)requestAnimationFrame(f);else c.remove();}
-requestAnimationFrame(f);}
-if(document.readyState==='complete')run();else window.addEventListener('load',run);
+function frame(now){var el=(now-t0)/1000;if(!reduce)rotY+=.0025;
+var cY=Math.cos(rotY),sY=Math.sin(rotY),cX=Math.cos(tiltX+tiltY*.3),sX=Math.sin(tiltX+tiltY*.3);ctx.clearRect(0,0,W,H);
+var gr=ctx.createRadialGradient(cx,cy,R*.1,cx,cy,R*1.5);gr.addColorStop(0,'rgba(201,195,255,.45)');gr.addColorStop(1,'rgba(201,195,255,0)');ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i],x=p.x*cY+p.z*sY,z=-p.x*sY+p.z*cY,y=p.y,y2=y*cX-z*sX,z2=y*sX+z*cX,f=1/(1.9-z2*.6),tx=cx+x*R*f*1.2,ty=cy+y2*R*f*1.2;
+var k=reduce?1:Math.min(1,Math.max(0,(el-p.d)/1.8)),e=ease(k),px=p.sx+(tx-p.sx)*e+Math.sin(p.w+el*1.5)*(1-e)*40,py=p.sy+(ty-p.sy)*e;
+if(e>=1){var dx=px-mx,dy=py-my,dd=dx*dx+dy*dy;if(dd<6400){var push=(1-dd/6400)*18/Math.sqrt(dd+1);px+=dx*push;py+=dy*push}}
+var depth=(z2+1)/2,a=(.25+depth*.75)*(.35+.65*e);ctx.fillStyle='rgba('+p.c[0]+','+p.c[1]+','+p.c[2]+','+a.toFixed(3)+')';ctx.beginPath();ctx.arc(px,py,p.s*(.7+depth*1.1),0,6.283);ctx.fill()}
+if(!reduce&&vis)requestAnimationFrame(frame)}
+function start(){build();t0=performance.now();requestAnimationFrame(frame)}
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var w=cv.clientWidth;if(Math.abs(w-W)>40||!reduce){build();if(reduce)requestAnimationFrame(frame)}},150)});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!vis){vis=true;requestAnimationFrame(frame)}vis=v}).observe(cv)}
+if(window.matchMedia&&matchMedia('(pointer: fine)').matches&&!reduce){host.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;tiltY=(my/H-.5)*.8;rotY+=((mx/W-.5)*.02)});host.addEventListener('pointerleave',function(){mx=my=-1e4;tiltY=0})}
+start();
 }catch(e){}})();
 </script>
 <a class="wa" href="https://wa.me/5493487533184?text=Hi%20sfera%2C%20I%27d%20like%20to%20talk%20about%20hiring." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.7A8.4 8.4 0 1 1 21 11.5z"/></svg><span>WhatsApp</span></a>
 <script>
 (function(){try{
 var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-/* service filter */
-var chips=document.querySelectorAll('.sv-chip'),grid=document.getElementById('sv-grid');
-Array.prototype.forEach.call(chips,function(c){c.addEventListener('click',function(){
-var p=c.getAttribute('data-pick');
-Array.prototype.forEach.call(chips,function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
-Array.prototype.forEach.call(grid.querySelectorAll('[data-g]'),function(el){el.hidden=!(p==='all'||el.getAttribute('data-g')===p);if(!el.hidden&&el.classList.contains('rv'))el.classList.add('in')});
-})});
-/* example panels: replay on hover, play once when seen on touch screens */
-function play(a){a.classList.remove('play');void a.offsetWidth;a.classList.add('play')}
-var cards=document.querySelectorAll('.sv');
-if(!rm){Array.prototype.forEach.call(cards,function(a){a.addEventListener('mouseenter',function(){play(a)});a.addEventListener('focusin',function(){play(a)})});
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){play(en.target);io.unobserve(en.target)}})},{threshold:.6});
-Array.prototype.forEach.call(cards,function(a){io.observe(a)})}}
-/* hero sphere follows the cursor a little */
-var sp=document.querySelector('.hsph'),hero=document.querySelector('section');
-if(sp&&hero&&!rm&&window.matchMedia&&matchMedia('(pointer: fine)').matches){
-hero.addEventListener('mousemove',function(ev){var r=hero.getBoundingClientRect();var x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5;sp.style.translate=(x*26).toFixed(1)+'px '+(y*20).toFixed(1)+'px'});
-hero.addEventListener('mouseleave',function(){sp.style.translate='0px 0px'})}
+/* services deck */
+var info={'full-cycle':['Hire','Full <em>Cycle</em>','We find, interview and close the right person. You meet only finalists.','One key role, no time to recruit.'],
+'sourcing-sprint':['Hire','Sourcing <em>Sprint</em>','A batch of pre-filtered candidates, ready for your team to take forward.','You need a full pipeline of candidates quickly.'],
+'embedded-recruiter':['Hire','Embedded <em>Recruiter</em>','A dedicated recruiter inside your team and tools.','Several roles at once.'],
+'process-setup':['Build','Process <em>Setup</em>','A clear, repeatable way to hire that your team can own.','Hiring is slow or depends on one person.'],
+'people-analytics':['Build','People <em>Analytics</em>','Live dashboards that show what works and what to improve.','Decisions are made without data.'],
+'hr-automation':['Build','HR <em>Automation</em>','We automate routine HR work, so your team can focus on key decisions.','Your team repeats tasks a tool could do.']};
+var cards=[].slice.call(document.querySelectorAll('.sd-card'));
+var stage=document.getElementById('sd-stage');
+if(stage&&cards.length){
+var rig=document.getElementById('sd-rig'),panel=document.getElementById('sd-panel'),count=document.getElementById('sd-count'),prog=document.getElementById('sd-prog'),studio=document.getElementById('sd');
+var pick='all',active=0,timer=null,T=3600,paused=false,seen=false,moved=false,x0=null;
+function list(){return cards.map(function(c,i){return i}).filter(function(i){return pick==='all'||cards[i].getAttribute('data-g')===pick})}
+function spread(){return Math.min(220,stage.clientWidth*.3)}
+function pad(n){return (n<10?'0':'')+n}
+function render(){var L=list(),pos=L.indexOf(active),sp=spread();
+cards.forEach(function(c,i){var k=L.indexOf(i);if(k<0){c.classList.add('off');c.classList.remove('on');c.style.transform='translateZ(-600px)';c.setAttribute('aria-hidden','true');return}
+c.classList.remove('off');c.removeAttribute('aria-hidden');var n=L.length,o=k-pos;if(o>n/2)o-=n;if(o<-n/2)o+=n;if(n%2===0&&o===n/2&&pos%2)o=-o;var ab=Math.abs(o);
+c.style.transform='translateX('+(o*sp)+'px) translateY('+(ab*14)+'px) translateZ('+(-ab*170)+'px) rotateY('+(o*-24)+'deg) rotateZ('+(o*3)+'deg)';c.style.zIndex=10-ab;c.style.filter=ab?'saturate(.85) brightness(.98)':'none';c.classList.toggle('on',o===0);c.setAttribute('aria-current',o===0?'true':'false')});
+var d=info[cards[active].id];panel.innerHTML='<div class="sd-swap" style="display:flex;flex-direction:column;gap:14px;height:100%"><span class="sd-k">'+d[0]+' / '+pad(active+1)+'</span><h4>'+d[1]+'</h4><p>'+d[2]+'</p><div class="sd-best"><span>Best when</span>'+d[3]+'</div><a class="sd-go" href="#contact">Talk to us &#8599;</a></div>';
+count.textContent=pad(pos+1)+' / '+pad(L.length)}
+function restart(){clearTimeout(timer);prog.classList.remove('run');if(rm||paused||!seen)return;void prog.offsetWidth;prog.style.setProperty('--t',T+'ms');prog.classList.add('run');timer=setTimeout(function(){step(1)},T)}
+function step(n){var L=list(),pos=L.indexOf(active);active=L[(pos+n+L.length)%L.length];render();restart()}
+function select(i){if(list().indexOf(i)<0){pick='all';[].forEach.call(document.querySelectorAll('.sd-chip'),function(x){x.setAttribute('aria-pressed',x.getAttribute('data-pick')==='all'?'true':'false')})}active=i;render();restart()}
+cards.forEach(function(c,i){c.addEventListener('click',function(){if(!moved&&i!==active)select(i)});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}})});
+document.getElementById('sd-prev').addEventListener('click',function(){step(-1)});
+document.getElementById('sd-next').addEventListener('click',function(){step(1)});
+stage.addEventListener('keydown',function(e){if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+[].forEach.call(document.querySelectorAll('.sd-chip'),function(b,_,all){b.addEventListener('click',function(){pick=b.getAttribute('data-pick');[].forEach.call(document.querySelectorAll('.sd-chip'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});var L=list();if(L.indexOf(active)<0)active=L[0];render();restart()})});
+stage.addEventListener('pointerdown',function(e){x0=e.clientX;moved=false});
+window.addEventListener('pointerup',function(e){if(x0===null)return;var dx=e.clientX-x0;x0=null;if(Math.abs(dx)>40){moved=true;step(dx<0?1:-1);setTimeout(function(){moved=false},50)}});
+if(!rm&&window.matchMedia&&matchMedia('(hover: hover)').matches){stage.addEventListener('pointermove',function(e){if(x0!==null)return;var r=stage.getBoundingClientRect();var px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;rig.style.transform='rotateY('+(px*8)+'deg) rotateX('+(-py*6)+'deg)'});stage.addEventListener('pointerleave',function(){rig.style.transform=''})}
+studio.addEventListener('mouseenter',function(){paused=true;restart()});studio.addEventListener('mouseleave',function(){paused=false;restart()});
+studio.addEventListener('focusin',function(){paused=true;restart()});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){seen=es[0].isIntersecting;restart()},{threshold:.4}).observe(studio)}else seen=true;
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(render,120)});
+function fromHash(){var h=location.hash.slice(1);var i=-1;cards.forEach(function(c,k){if(c.id===h)i=k});if(i>-1){select(i);var sv=document.getElementById('services');if(sv)sv.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'})}}
+window.addEventListener('hashchange',fromHash);
+render();if(location.hash)setTimeout(fromHash,60);
+}
+/* how we work timeline */
+var tl=document.getElementById('hw-tl');
+if(tl){var steps=[].slice.call(tl.querySelectorAll('.hw-step')),raf=null;
+function setP(p){tl.style.setProperty('--p',p.toFixed(4));tl.style.setProperty('--done',p>=1?1:0);steps.forEach(function(s,i){s.classList.toggle('on',p>=i/(steps.length-1)-0.001)})}
+function play(){cancelAnimationFrame(raf);if(rm){setP(1);return}var t0=performance.now();setP(0);(function f(n){var k=Math.min(1,(n-t0)/2600),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;setP(e);if(k<1)raf=requestAnimationFrame(f)})(t0)}
+if('IntersectionObserver' in window&&!rm){var tio=new IntersectionObserver(function(es){if(es[0].isIntersecting){play();tio.disconnect()}},{threshold:.25});tio.observe(tl)}else setP(1);
+setTimeout(function(){if(!tl.style.getPropertyValue('--p'))setP(1)},6000);}
 }catch(e){}})();
 </script>
+<script src="/chat.js" defer></script>
 </body>
 </html>
