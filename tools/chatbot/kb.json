@@ -1,0 +1,569 @@
+{
+ "version": 1,
+ "updated": "2026-11-22",
+ "fallback": {
+  "text": "I am not sure about that one, and I would rather not guess. A short call is the best way to get a real answer.",
+  "link": "https://cal.com/sofia-suarez-ms4fk6/intro",
+  "linkLabel": "Book an intro call"
+ },
+ "greeting": "Hi, I am sfera's automated assistant. I answer with pre-written answers and a person reviews everything that matters. What would you like to know?",
+ "categories": [
+  {
+   "id": "services",
+   "label": "Services"
+  },
+  {
+   "id": "process",
+   "label": "Process and pricing"
+  },
+  {
+   "id": "market",
+   "label": "LatAm market"
+  },
+  {
+   "id": "contracts",
+   "label": "Contracts and payroll"
+  },
+  {
+   "id": "about",
+   "label": "About sfera"
+  }
+ ],
+ "entries": [
+  {
+   "id": 1,
+   "cat": "services",
+   "q": "What does sfera do?",
+   "keywords": [
+    "what",
+    "do",
+    "sfera",
+    "company",
+    "offer"
+   ],
+   "a": "We find the right people and build a clear process, with the tools that keep both working, so hiring feels lighter.",
+   "status": "site"
+  },
+  {
+   "id": 2,
+   "cat": "services",
+   "q": "Which roles do you hire for?",
+   "keywords": [
+    "roles",
+    "positions",
+    "hire",
+    "engineering",
+    "sales",
+    "data",
+    "design",
+    "marketing"
+   ],
+   "a": "We hire across engineering, data, product, design, sales, marketing, operations and G&A, from individual contributors to team leads and managers. Engineering and data are where we go deepest, but every search follows the same steps: a clear brief, structured screening and a shortlist you can act on.",
+   "status": "site"
+  },
+  {
+   "id": 3,
+   "cat": "services",
+   "q": "Which service do I need?",
+   "keywords": [
+    "which",
+    "service",
+    "need",
+    "choose",
+    "start",
+    "help"
+   ],
+   "a": "If you need to hire, Full Cycle fits one key role, Sourcing Sprint gives you a full pipeline quickly and Embedded Recruiter covers several roles at once. If hiring is slow or depends on one person, Process Setup, People Analytics and HR Automation fix the system behind it. Not sure? Tell us what you need and we will help you choose.",
+   "status": "site"
+  },
+  {
+   "id": 4,
+   "cat": "services",
+   "q": "What is Full Cycle?",
+   "keywords": [
+    "full",
+    "cycle",
+    "end",
+    "recruit",
+    "close"
+   ],
+   "a": "We find, interview and close the right person. You meet only finalists. Best when you have one key role and no time to recruit.",
+   "status": "site"
+  },
+  {
+   "id": 5,
+   "cat": "services",
+   "q": "What is a Sourcing Sprint?",
+   "keywords": [
+    "sourcing",
+    "sprint",
+    "pipeline",
+    "pre-screened"
+   ],
+   "a": "Pre-screened candidates, ready for your team to interview. Best when you need a full pipeline of candidates quickly.",
+   "status": "site"
+  },
+  {
+   "id": 6,
+   "cat": "services",
+   "q": "What is an Embedded Recruiter?",
+   "keywords": [
+    "embedded",
+    "recruiter",
+    "dedicated",
+    "inside",
+    "team"
+   ],
+   "a": "A dedicated recruiter inside your team and tools. Best when you are hiring for several roles at once.",
+   "status": "site"
+  },
+  {
+   "id": 7,
+   "cat": "services",
+   "q": "What is Process Setup?",
+   "keywords": [
+    "process",
+    "setup",
+    "playbook",
+    "repeatable",
+    "structure"
+   ],
+   "a": "A clear, repeatable way to hire that your team can own. Best when hiring is slow or depends on one person.",
+   "status": "site"
+  },
+  {
+   "id": 8,
+   "cat": "services",
+   "q": "What is People Analytics?",
+   "keywords": [
+    "analytics",
+    "data",
+    "dashboard",
+    "metrics",
+    "report"
+   ],
+   "a": "Live dashboards that show what works and what to improve. Best when decisions are made without data.",
+   "status": "site"
+  },
+  {
+   "id": 9,
+   "cat": "services",
+   "q": "What is HR Automation?",
+   "keywords": [
+    "automation",
+    "automate",
+    "tools",
+    "routine"
+   ],
+   "a": "We automate routine HR work, so your team can focus on key decisions. Best when your team repeats tasks a tool could do.",
+   "status": "site"
+  },
+  {
+   "id": 10,
+   "cat": "services",
+   "q": "How do you use AI?",
+   "keywords": [
+    "ai",
+    "artificial",
+    "intelligence",
+    "agents",
+    "automation",
+    "chatgpt"
+   ],
+   "a": "AI handles the routine and people make the calls. AI assists our recruiters at every step, and a person reviews every candidate and makes every decision.",
+   "status": "site",
+   "link": "/insights/ai-in-hr-what-to-automate-and-what-a-person-decides",
+   "linkLabel": "Read our take on AI in HR"
+  },
+  {
+   "id": 11,
+   "cat": "process",
+   "q": "How does it start?",
+   "keywords": [
+    "start",
+    "begin",
+    "how",
+    "work",
+    "steps",
+    "process",
+    "kickoff"
+   ],
+   "a": "Four steps. Talk: a short call where you tell us what you need. Plan: we match a recruiter from our network to your stack and market, and agree scope, owners and timing together. Do: the team starts the day you sign, runs the search and sends regular updates. Improve: we review results together, so the process gets better with every hire.",
+   "status": "site"
+  },
+  {
+   "id": 12,
+   "cat": "process",
+   "q": "How does pricing work?",
+   "keywords": [
+    "price",
+    "pricing",
+    "cost",
+    "fee",
+    "fees",
+    "how",
+    "much",
+    "rate",
+    "commission"
+   ],
+   "a": "Pricing depends on the role, the seniority and the scope of the work. After a short call we send a clear proposal with scope and fees, so you know what to expect before we start. There is no commitment until you approve it.",
+   "status": "site"
+  },
+  {
+   "id": 13,
+   "cat": "process",
+   "q": "How long does a search take?",
+   "keywords": [
+    "long",
+    "time",
+    "fast",
+    "speed",
+    "days",
+    "weeks",
+    "timeline",
+    "fill"
+   ],
+   "a": "The team behind sfera has averaged 28 days to fill a role. Every search is different, so we agree timing together in the planning step.",
+   "status": "site"
+  },
+  {
+   "id": 14,
+   "cat": "process",
+   "q": "How do you vet candidates?",
+   "keywords": [
+    "vet",
+    "screen",
+    "assess",
+    "interview",
+    "technical",
+    "quality"
+   ],
+   "a": "Every candidate is screened by a recruiter on experience, motivation, expectations and communication before you see them. For engineering and data roles, a specialist also runs a technical interview, so your team only meets people who have already been assessed.",
+   "status": "site"
+  },
+  {
+   "id": 15,
+   "cat": "process",
+   "q": "What if a hire does not work out?",
+   "keywords": [
+    "guarantee",
+    "replace",
+    "replacement",
+    "fail",
+    "leave",
+    "warranty"
+   ],
+   "a": "Our placements come with a replacement guarantee. If a hire does not work out within the guarantee period, we rerun the search at no extra fee. The exact terms are written into the proposal before we start.",
+   "status": "site"
+  },
+  {
+   "id": 16,
+   "cat": "process",
+   "q": "What do I need to do?",
+   "keywords": [
+    "need",
+    "do",
+    "my",
+    "part",
+    "involved",
+    "time",
+    "effort",
+    "commitment"
+   ],
+   "a": "Tell us what matters, give quick feedback and make the calls. We handle the work, own the details and keep it all in one place.",
+   "status": "site"
+  },
+  {
+   "id": 17,
+   "cat": "process",
+   "q": "Is there a commitment?",
+   "keywords": [
+    "commitment",
+    "contract",
+    "lock",
+    "obligation",
+    "cancel"
+   ],
+   "a": "No. There is no commitment until you approve the proposal.",
+   "status": "site"
+  },
+  {
+   "id": 18,
+   "cat": "process",
+   "q": "Can you work inside our tools?",
+   "keywords": [
+    "tools",
+    "ats",
+    "slack",
+    "greenhouse",
+    "lever",
+    "workable",
+    "software"
+   ],
+   "a": "Yes, the Embedded Recruiter works inside your team and tools. Tell us what you use on the intro call and we will confirm how we would work with it.",
+   "status": "draft"
+  },
+  {
+   "id": 19,
+   "cat": "process",
+   "q": "Where do I start if I have no People team?",
+   "keywords": [
+    "startup",
+    "founder",
+    "no",
+    "people",
+    "team",
+    "first",
+    "hire",
+    "small"
+   ],
+   "a": "Start with a short call. We support teams at every stage, from founders hiring without a People team to fast-growing companies that need to scale their teams without lowering the bar. This guide shows how to set up your process before your first 10 hires.",
+   "status": "article",
+   "link": "/insights/hiring-process-before-your-first-hires",
+   "linkLabel": "Read the guide"
+  },
+  {
+   "id": 20,
+   "cat": "process",
+   "q": "How do we scale hiring from 40 to 100 people?",
+   "keywords": [
+    "scale",
+    "scaling",
+    "grow",
+    "growth",
+    "fast",
+    "100",
+    "bottleneck"
+   ],
+   "a": "The bottleneck is often the decision, not the pipeline. Build the process before you buy a tool, take work off your hiring managers and track every stage. Sofi wrote down what she learned doing it.",
+   "status": "article",
+   "link": "/insights/what-i-learned-scaling-hiring-from-40-to-100",
+   "linkLabel": "Read the article"
+  },
+  {
+   "id": 21,
+   "cat": "market",
+   "q": "Where do you source candidates?",
+   "keywords": [
+    "source",
+    "sourcing",
+    "where",
+    "countries",
+    "latam",
+    "europe",
+    "us",
+    "regions"
+   ],
+   "a": "We source wherever the role requires, with deep reach across Latin America (including Argentina, Brazil, Chile, Colombia, Mexico and Uruguay), the US and Europe. We combine direct outreach with our own talent pool, so you meet people beyond those actively applying.",
+   "status": "site"
+  },
+  {
+   "id": 22,
+   "cat": "market",
+   "q": "How do I hire senior engineers in LatAm?",
+   "keywords": [
+    "senior",
+    "engineers",
+    "latam",
+    "hire",
+    "guide",
+    "latin",
+    "america"
+   ],
+   "a": "We wrote a step-by-step guide for US founders, from defining the role to closing the offer, with data from our own polls.",
+   "status": "article",
+   "link": "/insights/how-to-hire-senior-engineers-in-latam",
+   "linkLabel": "Read the guide"
+  },
+  {
+   "id": 23,
+   "cat": "market",
+   "q": "What do senior engineers earn in LatAm?",
+   "keywords": [
+    "salary",
+    "salaries",
+    "earn",
+    "pay",
+    "compensation",
+    "usd",
+    "senior"
+   ],
+   "a": "We asked 524 people in our network what a senior engineer in LatAm earns per month in USD. The results are in the article, with what they can and cannot tell you. They come from our network, so they are a signal and not a representative sample.",
+   "status": "article",
+   "link": "/insights/latam-senior-engineer-salary-poll",
+   "linkLabel": "See the poll results"
+  },
+  {
+   "id": 24,
+   "cat": "market",
+   "q": "Contractor, employee or EOR?",
+   "keywords": [
+    "contractor",
+    "employee",
+    "eor",
+    "employer",
+    "record",
+    "setup",
+    "contract",
+    "freelance"
+   ],
+   "a": "We asked 203 people in our network which setup they prefer for a remote job at a US company. The right setup is a decision to make with your lawyer or accountant, so the article shows what people prefer and does not give legal advice.",
+   "status": "article",
+   "link": "/insights/contractor-vs-employee-eor-latam-engineers",
+   "linkLabel": "Read the article"
+  },
+  {
+   "id": 25,
+   "cat": "market",
+   "q": "What do LatAm engineers want from a US job?",
+   "keywords": [
+    "want",
+    "prefer",
+    "candidates",
+    "engineers",
+    "motivation",
+    "offer",
+    "remote"
+   ],
+   "a": "We ran four polls in our network, with 921 votes in total, on pay, setup and process.",
+   "status": "article",
+   "link": "/insights/what-latam-engineers-want-from-us-jobs",
+   "linkLabel": "See what they said"
+  },
+  {
+   "id": 26,
+   "cat": "market",
+   "q": "Should we use AI in hiring?",
+   "keywords": [
+    "ai",
+    "hiring",
+    "automate",
+    "screening",
+    "law",
+    "nyc",
+    "eu",
+    "bias"
+   ],
+   "a": "Use it for the routine and keep people in the decisions. Some places regulate automated hiring tools, so check the rules with your lawyer. Here is how we draw the line.",
+   "status": "article",
+   "link": "/insights/ai-in-hr-what-to-automate-and-what-a-person-decides",
+   "linkLabel": "Read the article"
+  },
+  {
+   "id": 27,
+   "cat": "contracts",
+   "q": "Who handles contracts and payroll?",
+   "keywords": [
+    "contracts",
+    "payroll",
+    "paperwork",
+    "employment",
+    "handle",
+    "paid"
+   ],
+   "a": "Your company handles contracts and payroll. We focus on the hiring side: finding, screening and presenting candidates and guiding the process through to the offer.",
+   "status": "site"
+  },
+  {
+   "id": 28,
+   "cat": "contracts",
+   "q": "What if we have no entity in the country?",
+   "keywords": [
+    "entity",
+    "country",
+    "abroad",
+    "international",
+    "eor",
+    "no",
+    "company"
+   ],
+   "a": "If you are hiring in a country where you have no entity, we can point you to the options that fit your setup. The right choice depends on your situation, so confirm it with your lawyer or accountant.",
+   "status": "site"
+  },
+  {
+   "id": 29,
+   "cat": "contracts",
+   "q": "Do you give legal or tax advice?",
+   "keywords": [
+    "legal",
+    "tax",
+    "lawyer",
+    "accountant",
+    "advice",
+    "law",
+    "compliance"
+   ],
+   "a": "No. We are not a law or accounting firm. We can show you the options people usually choose, and you should confirm the right one for your case with your own lawyer or accountant.",
+   "status": "draft"
+  },
+  {
+   "id": 30,
+   "cat": "about",
+   "q": "Who is behind sfera?",
+   "keywords": [
+    "who",
+    "founder",
+    "team",
+    "sofi",
+    "behind",
+    "about",
+    "people"
+   ],
+   "a": "sfera is led by Sofi Suarez, with 7+ years in talent acquisition, from sourcing and full-cycle hiring to HR business partnering and people analytics. She works with a network of specialist recruiters.",
+   "status": "site"
+  },
+  {
+   "id": 31,
+   "cat": "about",
+   "q": "Who do you work with?",
+   "keywords": [
+    "clients",
+    "customers",
+    "work",
+    "with",
+    "companies",
+    "industries",
+    "size"
+   ],
+   "a": "Teams at every stage, from startups without a People team to fast-growing companies. We work with teams in LatAm and the US.",
+   "status": "draft"
+  },
+  {
+   "id": 32,
+   "cat": "about",
+   "q": "How do I get in touch?",
+   "keywords": [
+    "contact",
+    "email",
+    "call",
+    "book",
+    "talk",
+    "meeting",
+    "reach"
+   ],
+   "a": "The easiest way is a short intro call. You can also write to sofia@sferapeople.com.",
+   "status": "site",
+   "link": "https://cal.com/sofia-suarez-ms4fk6/intro",
+   "linkLabel": "Book an intro call"
+  },
+  {
+   "id": 33,
+   "cat": "about",
+   "q": "I am a candidate. Can I apply?",
+   "keywords": [
+    "candidate",
+    "apply",
+    "job",
+    "jobs",
+    "open",
+    "roles",
+    "talent",
+    "cv"
+   ],
+   "a": "Yes. You can see our open searches and join our talent pool.",
+   "status": "site",
+   "link": "/talent",
+   "linkLabel": "Go to the talent page"
+  }
+ ]
+}
